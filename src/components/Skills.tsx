@@ -1,10 +1,8 @@
-import { SKILL_BARS, TOOLKIT } from "../lib/data";
-import { Reveal, useInView } from "../lib/hooks";
+import { SKILL_AREAS, TOOLKIT } from "../lib/data";
+import { Reveal } from "../lib/hooks";
 import { SectionHeading } from "./Shared";
 
 export default function Skills() {
-  const { ref, inView } = useInView<HTMLDivElement>(0.15);
-
   return (
     <section id="skills" className="relative py-24 lg:py-32 scroll-mt-20">
       <div className="wrap">
@@ -23,25 +21,38 @@ export default function Skills() {
         />
 
         <div className="grid lg:grid-cols-12 gap-10 lg:gap-14 items-start">
-          {/* bars */}
-          <div ref={ref} className="lg:col-span-5 space-y-5">
-            {SKILL_BARS.map((s, i) => (
-              <Reveal key={s.name} delay={i * 60} y={18}>
-                <div className="group">
-                  <div className="flex items-baseline justify-between gap-4">
-                    <p className="font-display font-medium text-[15px] text-paper">{s.name}</p>
-                    <span className="font-mono text-[11.5px] text-amber tabular-nums">{s.level}</span>
+          {/* competency areas */}
+          <div className="lg:col-span-5">
+            <Reveal y={24}>
+              <p className="font-mono text-[11px] tracking-[0.22em] uppercase text-faint mb-5">
+                <span className="text-amber">↳</span> where I work best
+              </p>
+            </Reveal>
+            <div className="space-y-3">
+              {SKILL_AREAS.map((s, i) => (
+                <Reveal key={s.name} delay={i * 70} y={18}>
+                  <div className="group flex items-start gap-4 border border-line bg-ink-900/60 px-5 py-4 transition-all duration-300 hover:-translate-y-0.5 hover:border-amber/50 hover:bg-ink-850">
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true" className="mt-1 shrink-0 text-amber transition-transform duration-300 group-hover:rotate-90">
+                      <path d="M9 1.5 10.8 7.2 16.5 9l-5.7 1.8L9 16.5 7.2 10.8 1.5 9l5.7-1.8L9 1.5Z" stroke="currentColor" strokeWidth="1.3" strokeLinejoin="round" />
+                    </svg>
+                    <div>
+                      <p className="font-display font-medium text-[15px] text-paper group-hover:text-amber transition-colors">
+                        {s.name}
+                      </p>
+                      <p className="font-mono text-[10.5px] tracking-[0.04em] text-faint mt-1 leading-relaxed">
+                        {s.note}
+                      </p>
+                    </div>
                   </div>
-                  <p className="font-mono text-[10px] tracking-[0.06em] text-faint mt-0.5">{s.note}</p>
-                  <div className="mt-2 h-[5px] bg-ink-700/70 overflow-hidden">
-                    <div
-                      className="bar-fill h-full bg-gradient-to-r from-amber-deep to-amber"
-                      style={{ width: inView ? `${s.level}%` : "0%" }}
-                    />
-                  </div>
-                </div>
-              </Reveal>
-            ))}
+                </Reveal>
+              ))}
+            </div>
+            <Reveal delay={380} y={16}>
+              <p className="mt-6 font-mono text-[11px] leading-relaxed text-faint border-l-2 border-amber/50 pl-4">
+                The honest bit: these are the tools I reach for today. The habit
+                that matters is learning the next one before I'm asked to.
+              </p>
+            </Reveal>
           </div>
 
           {/* toolkit */}

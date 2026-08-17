@@ -181,14 +181,14 @@ export default function Hero() {
                   <circle cx="6" cy="6" r="4.6" stroke="#ffb224" strokeWidth="1.2" />
                   <path d="M1.4 6h9.2M6 1.4c-2.6 2.6-2.6 6.6 0 9.2 2.6-2.6 2.6-6.6 0-9.2Z" stroke="#ffb224" strokeWidth="1.1" />
                 </svg>
-                Open to relocation
+                Open to relocation (India / International)
               </span>
               <span className="inline-flex items-center gap-2 border border-line bg-ink-850/80 px-3.5 py-2 font-mono text-[11px] tracking-[0.1em] uppercase text-muted">
                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
                   <rect x="1.5" y="3.5" width="9" height="6" stroke="#ff6d5a" strokeWidth="1.2" />
                   <path d="M4 6.5l1.4 1.4L8 5.3" stroke="#ff6d5a" strokeWidth="1.2" />
                 </svg>
-                Remote / international
+                Hybrid / Remote
               </span>
             </div>
           </Reveal>
@@ -250,11 +250,11 @@ export default function Hero() {
             <div className="floaty mt-5 border border-line bg-ink-850/80 px-4 py-3.5 flex items-start gap-3">
               <span className="mt-0.5 w-2 h-2 bg-teal shrink-0" />
               <p className="font-mono text-[11.5px] leading-relaxed text-muted">
-                <span className="text-teal">currently:</span> building AI-assisted
-                analytics workflows with <span className="text-paper">n8n</span>,{" "}
+                <span className="text-teal">currently:</span> exploring AI
+                workflows with <span className="text-paper">n8n</span>,{" "}
                 <span className="text-paper">Claude API</span> &{" "}
-                <span className="text-paper">Ollama</span> — and looking for the
-                right team to bring them to.
+                <span className="text-paper">Ollama</span> — automating the
+                repetitive parts of analytics.
               </p>
             </div>
           </Reveal>

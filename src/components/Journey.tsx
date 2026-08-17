@@ -16,8 +16,9 @@ export default function Journey() {
           title={
             <>
               India <span className="text-teal">→</span> France{" "}
-              <span className="text-teal">→</span> India,
-              <br className="hidden sm:block" /> with a widening lens
+              <span className="text-teal">→</span> India{" "}
+              <span className="text-teal">→</span>{" "}
+              <span className="text-transparent [-webkit-text-stroke:1.3px_#3ad6c3]">next?</span>
             </>
           }
           note="A career rarely moves in a straight line. Mine moved across continents — systems first, then data, then the decisions behind the data."
@@ -26,28 +27,61 @@ export default function Journey() {
         {/* flight strip */}
         <Reveal>
           <div className="tick-card border border-line bg-ink-900/60 px-6 py-6 sm:px-10" style={{ "--tick": "#3ad6c3" } as CSSProperties}>
-            <div className="grid grid-cols-[1fr_auto_1fr_auto_1fr] items-center gap-2 sm:gap-6">
-              {ROUTE.map((r, i) => (
-                <div key={`${r.code}-${i}`} className="contents">
-                  <div className={`flex flex-col ${i === 1 ? "items-center text-center" : i === 2 ? "items-end text-right" : "items-start"}`}>
-                    <span className="font-display font-semibold text-xl sm:text-3xl text-paper tracking-wide">
-                      {r.code}
-                    </span>
-                    <span className="font-mono text-[10px] sm:text-[11px] text-muted mt-1">
-                      {r.city}
-                    </span>
-                    <span className={`font-mono text-[10px] mt-0.5 ${i === 2 ? "text-amber" : "text-faint"}`}>
-                      {r.years}
-                    </span>
+            <div className="grid grid-cols-[1fr_auto_1fr_auto_1fr_auto_1fr] items-center gap-1.5 sm:gap-5">
+              {ROUTE.map((r, i) => {
+                const unknown = r.code === "?";
+                const last = i === ROUTE.length - 1;
+                return (
+                  <div key={`${r.code}-${i}`} className="contents">
+                    <div
+                      className={`flex flex-col ${
+                        i === 0
+                          ? "items-start"
+                          : last
+                          ? "items-end text-right"
+                          : "items-center text-center"
+                      }`}
+                    >
+                      <span
+                        className={`font-display font-semibold text-xl sm:text-3xl tracking-wide ${
+                          unknown
+                            ? "text-transparent [-webkit-text-stroke:1.5px_#ffb224]"
+                            : "text-paper"
+                        }`}
+                      >
+                        {r.code}
+                      </span>
+                      <span className="font-mono text-[10px] sm:text-[11px] text-muted mt-1">
+                        {r.city}
+                      </span>
+                      <span
+                        className={`font-mono text-[10px] mt-0.5 ${
+                          i === 2 ? "text-teal" : unknown ? "text-amber" : "text-faint"
+                        }`}
+                      >
+                        {r.years}
+                      </span>
+                    </div>
+                    {i < ROUTE.length - 1 && (
+                      <svg className="w-full max-w-[52px] sm:max-w-[120px] h-6 sm:h-8 text-faint" viewBox="0 0 160 32" fill="none" preserveAspectRatio="none" aria-hidden="true">
+                        <path
+                          d="M4 22 C 50 4, 110 4, 156 22"
+                          stroke={i === ROUTE.length - 2 ? "#ffb224" : "currentColor"}
+                          strokeWidth="1.4"
+                          strokeDasharray={i === ROUTE.length - 2 ? "2 7" : undefined}
+                          strokeLinecap="round"
+                          className={i === ROUTE.length - 2 ? "" : "anim-dash"}
+                          opacity={i === ROUTE.length - 2 ? 0.85 : 1}
+                        />
+                        <path
+                          d="M146 14 l12 7 -14 3 4 -4 -6 -2 4 -4Z"
+                          fill={i === ROUTE.length - 2 ? "#ffb224" : "#3ad6c3"}
+                        />
+                      </svg>
+                    )}
                   </div>
-                  {i < 2 && (
-                    <svg className="w-full max-w-[160px] h-8 text-faint" viewBox="0 0 160 32" fill="none" aria-hidden="true">
-                      <path d="M4 22 C 50 4, 110 4, 156 22" stroke="currentColor" strokeWidth="1.4" className="anim-dash" />
-                      <path d="M146 14 l12 7 -14 3 4 -4 -6 -2 4 -4Z" fill="#3ad6c3" />
-                    </svg>
-                  )}
-                </div>
-              ))}
+                );
+              })}
             </div>
           </div>
         </Reveal>

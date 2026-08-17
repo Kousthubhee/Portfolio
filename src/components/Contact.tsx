@@ -42,7 +42,10 @@ export default function Contact() {
               </span>
             ))}
             <span className="font-mono text-[11px] tracking-[0.1em] px-3 py-1.5 border border-amber/40 bg-amber/10 text-amber">
-              India · Remote · International
+              Open to relocation (India / International)
+            </span>
+            <span className="font-mono text-[11px] tracking-[0.1em] px-3 py-1.5 border border-teal/40 bg-teal/10 text-teal">
+              Hybrid / Remote
             </span>
           </div>
         </Reveal>
@@ -68,6 +71,18 @@ export default function Contact() {
               </svg>
               Write to me
             </a>
+            <a
+              href={PROFILE.whatsapp}
+              target="_blank"
+              rel="noreferrer"
+              className="group inline-flex items-center gap-3 bg-[#25D366] text-ink-950 font-mono text-[12px] font-semibold tracking-[0.14em] uppercase px-6 py-3.5 transition-all hover:-translate-y-0.5 hover:shadow-[0_10px_30px_rgba(37,211,102,0.3)]"
+            >
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                <path d="M7 1.6a5.4 5.4 0 0 0-4.65 8.14L1.6 12.4l2.72-.71A5.4 5.4 0 1 0 7 1.6Z" stroke="currentColor" strokeWidth="1.25" strokeLinejoin="round" />
+                <path d="M5.1 4.4c-.2.5-.2 1.5.7 2.7.8 1 1.9 1.5 2.5 1.5.4 0 .8-.2.9-.6l.2-.5-1-.5-.5.5c-.5-.2-1.2-.9-1.4-1.4l.5-.5-.6-1-.6.1c-.3.1-.6.3-.7.7Z" fill="currentColor" />
+              </svg>
+              WhatsApp me
+            </a>
             {[
               {
                 label: "LinkedIn",
@@ -85,16 +100,6 @@ export default function Contact() {
                 icon: (
                   <svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true">
                     <path d="M5 12.5v-2c-2.2.5-2.8-1-2.8-1M9 12.5v-2.6c0-.6-.1-1-.3-1.3 1.8-.2 3.1-1.2 3.1-3.2 0-.9-.3-1.5-.7-2 .1-.3.3-1-.1-2 0 0-.7-.2-2 .8a6 6 0 0 0-3.4 0c-1.3-1-2-.8-2-.8-.4 1-.2 1.7-.1 2-.4.5-.7 1.1-.7 2 0 2 1.3 3 3.1 3.2-.2.3-.3.7-.3 1.3v2.6" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                ),
-              },
-              {
-                label: "Portfolio",
-                href: PROFILE.portfolio,
-                icon: (
-                  <svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true">
-                    <circle cx="7" cy="7" r="5.5" stroke="currentColor" strokeWidth="1.3" />
-                    <path d="M1.5 7h11M7 1.5c-3 3-3 8 0 11 3-3 3-8 0-11Z" stroke="currentColor" strokeWidth="1.2" />
                   </svg>
                 ),
               },
@@ -150,7 +155,7 @@ export default function Contact() {
               © 2026 Kousthubhee Krishna Kotte
             </p>
             <p className="mt-1 font-mono text-[10.5px] text-faint">
-              Hyderabad → Rouen → Hyderabad
+              India → France → India → <span className="text-amber">next: ?</span>
             </p>
             <a
               href="#top"

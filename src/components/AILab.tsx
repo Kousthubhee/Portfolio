@@ -82,10 +82,10 @@ export default function AILab() {
 
         <Reveal>
           <p className="max-w-3xl -mt-6 mb-14 text-[15px] leading-relaxed text-muted">
-            I treat AI as a colleague for the repetitive parts of analytics:
-            extraction, drafting, matching, summarizing. The loop below is how I
-            built my own job-search engine — the same pattern I apply to data
-            pipelines, reporting and research.
+            I'm currently exploring how AI fits into everyday analytics:
+            extraction, drafting, matching, summarizing. The loop below is the
+            pattern I'm testing — the same shape I'd apply to a data pipeline,
+            a report, or any repetitive workflow worth automating.
           </p>
         </Reveal>
 

@@ -16,7 +16,7 @@ export default function Credentials() {
             <>
               Degrees, certificates
               <br />
-              and <span className="text-coral">four languages</span>
+              and <span className="text-coral">three languages</span>
             </>
           }
           note="Formal proof of the journey — but every credential here was chosen to serve the next problem, not to fill a shelf."
@@ -118,8 +118,8 @@ export default function Credentials() {
                   ))}
                 </div>
                 <p className="mt-6 border-t border-line/70 pt-4 font-mono text-[10.5px] leading-relaxed text-faint">
-                  French at A2 and climbing — a year in Normandy gave me the
-                  accent; the vocabulary is a work in progress.
+                  Comfortable presenting and collaborating in English and Hindi;
+                  Telugu is home.
                 </p>
               </div>
             </Reveal>

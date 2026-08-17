@@ -1,18 +1,16 @@
 export const PROFILE = {
   name: "Kousthubhee Krishna Kotte",
-  firstName: "KOUSTHUBHEE",
-  lastName: "KRISHNA KOTTE",
+  firstName: "Kousthubhee Krishna",
+  lastName: "KOTTE",
   role: "Data & BI Analyst",
-  tagline:
-    "M.Sc. Business Analytics (NEOMA, France) · ex-Infosys Systems Engineer · SQL, Python, BI & AI workflows",
-  location: "India",
-  email: "kousthubheekrishnakotte@gmail.com",
-  phone: "+91 · available on request",
-  linkedin: "https://www.linkedin.com/in/kousthubhee-krishna-kotte",
+  email: "kousthubheekrishna@gmail.com",
+  phone: "+91 94417 24256",
+  whatsapp: "https://wa.me/919441724256",
+  linkedin: "https://www.linkedin.com/in/kousthubheekrishna/",
   github: "https://github.com/Kousthubhee/Projects",
-  portfolio: "https://kousthubheekrishna.great-site.net/",
+  location: "India",
   summary:
-    "I sit at the intersection of data, technology and business. I began by keeping enterprise systems alive at Infosys, crossed continents to study Business Analytics in France, and now I turn messy data into dashboards, models and decisions — with AI automating the repetitive parts in between.",
+    "From enterprise systems to business analytics — I turn messy data into decisions. M.Sc. Business Analytics (France), two years in enterprise tech (Infosys), and hands-on with SQL, Python, Power BI, Tableau and AI-assisted workflows. Currently exploring automation with n8n, Claude API and Ollama.",
 };
 
 export const NAV_LINKS = [
@@ -22,171 +20,165 @@ export const NAV_LINKS = [
   { id: "work", label: "Work" },
   { id: "ai-lab", label: "AI Lab" },
   { id: "skills", label: "Skills" },
+  { id: "contact", label: "Contact" },
 ];
 
-export const HERO_QUERY = `$ query --source candidate.profile
+export const HERO_QUERY = `SELECT name, focus, availability
+FROM candidates
+WHERE mindset = 'systems → possibilities'
+  AND open_to_work = TRUE;`;
 
-SELECT name, focus, status
-FROM   candidates
-WHERE  curiosity = 'unbounded'
-  AND  systems <> 'maintained, but understood'
-ORDER  BY momentum DESC
-LIMIT  1;`;
-
-export const HERO_ROWS: { k: string; v: string; accent?: string }[] = [
+export const HERO_ROWS = [
   { k: "name", v: "Kousthubhee Krishna Kotte" },
   { k: "focus", v: "Data · BI · Business Analytics" },
-  { k: "route", v: "India → France → India" },
-  { k: "stack", v: "SQL · Python · Power BI · Tableau · LLMs" },
-  { k: "status", v: "OPEN TO WORK", accent: "amber" },
+  { k: "base", v: "India — open to relocation" },
+  { k: "mode", v: "Hybrid / Remote" },
+  { k: "status", v: "OPEN TO WORK", accent: true },
 ];
 
 export const KPIS = [
-  { value: 13.3, decimals: 1, suffix: "M+", label: "transaction records analyzed" },
+  { value: 13.3, suffix: "M+", label: "transactions analyzed", decimals: 1 },
   { value: 93, suffix: "%", label: "CKD model accuracy" },
-  { value: 240, suffix: "+", label: "survey responses turned into features" },
-  { value: 60, suffix: "%+", label: "student queries auto-resolved by AI" },
-  { value: 3, suffix: "", label: "roadmap decisions shaped by my KPIs" },
-  { value: 9, suffix: "", label: "certifications & counting" },
+  { value: 240, suffix: "+", label: "survey responses → 3 features" },
+  { value: 60, suffix: "%+", label: "queries auto-resolved by AI" },
+  { value: 2, suffix: " yrs", label: "enterprise systems @ Infosys" },
+  { value: 10, suffix: "+", label: "dashboards shipped" },
 ];
 
 export const TICKER = [
-  "SQL", "Python", "Power BI", "Tableau", "BigQuery", "GCP", "Snowflake",
-  "Looker Studio", "n8n", "Ollama", "Claude API", "ChatGPT", "Scikit-learn",
-  "Pandas", "Alteryx", "R", "Supabase", "Flask", "Excel", "A/B Testing",
-  "ETL / ELT", "Prompt Engineering", "Git",
+  "SQL",
+  "Python",
+  "Power BI",
+  "Tableau",
+  "BigQuery",
+  "GCP",
+  "Pandas",
+  "Scikit-learn",
+  "Excel",
+  "Looker Studio",
+  "Generative AI",
+  "n8n Automation",
+  "Ollama",
+  "Machine Learning",
+  "ETL / ELT",
+  "A/B Testing",
+  "Data Storytelling",
 ];
 
 export const ROUTE = [
-  { code: "HYD", city: "Hyderabad, India", years: "2017 – 2023" },
-  { code: "CDG", city: "Rouen, France", years: "2024 – 2025" },
-  { code: "HYD", city: "Hyderabad, India", years: "2025 →" },
+  { code: "IN", city: "India", years: "roots · 2017–23" },
+  { code: "FR", city: "France", years: "M.Sc. · 2024–25" },
+  { code: "IN", city: "India", years: "back · now" },
+  { code: "?", city: "next stop", years: "looking forward to it" },
 ];
 
 export const MILESTONES = [
   {
-    period: "2017 — 2021",
-    place: "Hyderabad, India",
-    tag: "FOUNDATION",
-    title: "B.E. Computer Science & Engineering",
-    org: "Stanley College of Engineering & Technology",
-    text: "Data structures, algorithms, DBMS, AI and data mining — the technical bedrock everything else was built on.",
-    accent: "teal",
-  },
-  {
-    period: "MAR — MAY 2021",
-    place: "Remote, India",
-    tag: "FIRST SIGNALS",
-    title: "Data Science Intern",
-    org: "ShapeAI",
-    text: "Cleaned and analyzed 10,000+ records with Pandas and NumPy; designed Tableau visualizations for non-technical stakeholders. The first hint that data was the direction.",
-    accent: "teal",
-  },
-  {
-    period: "SEP 2021 — AUG 2023",
-    place: "Hyderabad, India",
-    tag: "SYSTEMS",
-    title: "Systems Engineer — Data & Reporting Analytics",
-    org: "Infosys",
-    text: "Enterprise middleware operations on Oracle Fusion: incident logs queried with SQL, SLA dashboards in Excel, data validation across migrations spanning three environments.",
-    accent: "coral",
-  },
-  {
-    period: "SEP 2023 — AUG 2024",
-    place: "Hyderabad, India",
-    tag: "REBUILD",
-    title: "Career Break — Professional Development",
-    org: "Self-directed",
-    text: "A deliberate year of full-time upskilling in Python, statistics and machine learning while preparing for a master's abroad. Not a gap — a pivot.",
-    accent: "coral",
-  },
-  {
-    period: "SEP 2024 — DEC 2025",
-    place: "Rouen, France",
-    tag: "ANALYTICS",
-    title: "M.Sc. Business Analytics",
-    org: "NEOMA Business School",
-    text: "Statistics, predictive analytics, BI, data modeling and ML — learned to ask whether the question itself is correct before writing the query.",
-    accent: "teal",
-  },
-  {
-    period: "MAY — SEP 2025",
-    place: "Rouen, France",
-    tag: "PRODUCT",
-    title: "Product & Data Analytics Trainee",
-    org: "NEOMA Incubator",
-    text: "240+ survey responses → 3 prioritized features. Built the KPI framework behind 3 roadmap decisions; shipped an AI chatbot resolving 60%+ of queries.",
-    accent: "amber",
-  },
-  {
-    period: "DEC 2025 → NOW",
-    place: "India · open to the world",
-    tag: "YOU ARE HERE",
-    title: "Open to Data, BI, Product & Analytics Engineering roles",
-    org: "India / Remote / International",
-    text: "Back home with a different lens — technical, analytical and business at once. Looking for teams where data drives decisions and curiosity is an asset.",
+    period: "Now",
+    tag: "Open to work",
+    title: "Looking for the right team",
+    org: "Data · BI · Analytics",
+    place: "India / Hybrid / Remote / International",
+    text: "Seeking a Data, BI, Product or Analytics Engineering role — while continuing to explore AI-assisted workflows with n8n, Claude API and Ollama.",
     accent: "amber",
     current: true,
+  },
+  {
+    period: "May – Sep 2025",
+    tag: "Traineeship",
+    title: "Product & Data Analytics Trainee",
+    org: "NEOMA Incubator",
+    place: "Rouen, France",
+    text: "Turned 240+ survey responses into 3 prioritized features, built the KPI framework behind 3 roadmap decisions, and deployed an AI chatbot resolving 60%+ of queries.",
+    accent: "teal",
+  },
+  {
+    period: "Sep 2024 – Dec 2025",
+    tag: "M.Sc.",
+    title: "M.Sc. Business Analytics",
+    org: "NEOMA Business School",
+    place: "Rouen, France",
+    text: "Statistics, predictive analytics, machine learning and BI — bridging a systems engineer's discipline with the questions businesses actually ask.",
+    accent: "teal",
+  },
+  {
+    period: "Sep 2023 – Aug 2024",
+    tag: "Career break",
+    title: "Deliberate upskilling",
+    org: "Self-directed",
+    place: "India",
+    text: "A pause on purpose: Python, statistics and machine-learning fundamentals, full time, while preparing the move to France.",
+    accent: "coral",
+  },
+  {
+    period: "Sep 2021 – Aug 2023",
+    tag: "Systems",
+    title: "Systems Engineer — Data & Reporting",
+    org: "Infosys",
+    place: "Hyderabad, India",
+    text: "SQL on large-scale incident logs, Excel BI dashboards for SLA KPIs, and migration validation across 3 environments — where I learned how systems really behave.",
+    accent: "amber",
+  },
+  {
+    period: "Mar – May 2021",
+    tag: "Internship",
+    title: "Data Science Intern",
+    org: "ShapeAI",
+    place: "Remote, India",
+    text: "Cleaned and analyzed 10,000+ records with Pandas and NumPy; learned to present findings to non-technical stakeholders through Tableau.",
+    accent: "coral",
+  },
+  {
+    period: "2017 – 2021",
+    tag: "Foundation",
+    title: "B.E. Computer Science & Engineering",
+    org: "Stanley College of Engineering & Technology",
+    place: "Hyderabad, India",
+    text: "The technical grammar — data structures, DBMS, AI and data mining — that everything since has been written in.",
+    accent: "teal",
   },
 ];
 
 export const CHAPTERS = [
   {
     numeral: "I",
-    title: "The Beginning",
+    title: "Systems first, questions soon",
+    quote: "Behind every system is an ecosystem",
     accent: "teal",
-    body: "Computer Science engineering, then Infosys as a Systems Engineer — reboots, migrations, troubleshooting, Oracle Fusion Middleware. Not glamorous, but it taught me what university could not: behind every dashboard is an ecosystem of systems, data, people and decisions.",
-    quote: "Technology is not just about writing code.",
+    body: "I studied Computer Science from 2017 to 2021, then joined Infosys as a Systems Engineer — enterprise middleware, Oracle Fusion, migrations, reboots, troubleshooting. It wasn't glamorous, and it was exactly what I needed. I learned that behind every application sits an ecosystem of systems, data, people and dependencies — and how easily one small fault ripples through all of them. But the longer I kept systems running, the more I kept asking the questions behind them: why does this process behave the way it does? What would the data say? Those questions quietly pushed me toward analytics.",
   },
   {
     numeral: "II",
-    title: "Wanting Something More",
-    accent: "coral",
-    body: "The questions behind the technology became louder than the technology itself. Why did the process behave that way? What could the data tell us? Those questions pushed me toward analytics — and toward NEOMA Business School in France.",
-    quote: "I had a technical foundation, but I wanted the why behind it.",
+    title: "Between continents, between disciplines",
+    quote: "A good analyst asks whether the question is correct",
+    accent: "amber",
+    body: "An M.Sc. in Business Analytics at NEOMA took me from India to France — a new country, a new classroom, an unfamiliar accent on everything I thought I knew. It connected two halves of me that had always felt separate: technology and business. The real lesson wasn't a tool; it was a standard. A query is only as good as the question it answers. A dashboard is only as good as the decision it enables. A model is only as valuable as the problem it solves. I came home a different analyst — one who reads a problem technically, analytically and commercially at once.",
   },
   {
     numeral: "III",
-    title: "Between Continents",
-    accent: "amber",
-    body: "A new country, a new language, an international classroom. Studying Business Analytics connected two parts of me that had felt separate — technology and business. Uncomfortable at times, which is precisely why it mattered.",
-    quote: "A good analyst asks whether the question itself is correct.",
+    title: "Learning by building",
+    quote: "A dataset becomes a pipeline becomes a decision",
+    accent: "coral",
+    body: "I rarely want to learn anything purely in theory — if a technology interests me, I want to build something with it. So a dataset became a pipeline, a pipeline became a model, a model fed a dashboard, and the dashboard became a decision-making tool. Increasingly, AI sits across that whole chain, quietly automating the repetitive parts — which is exactly what I'm exploring right now with n8n, Claude API and Ollama. Underneath all of it is one constant: curiosity. Technology simply gives that curiosity somewhere to go.",
   },
   {
     numeral: "IV",
-    title: "A Different Perspective",
-    accent: "teal",
-    body: "Returning to India, I was no longer just a CS graduate with enterprise experience. I could look at a problem from multiple angles at once. I also learned that skills are only half the story — a resume, a portfolio and a project must each tell a coherent story.",
-    quote: "A project should show not only what was built, but why it mattered.",
-  },
-  {
-    numeral: "V",
-    title: "Learning to Build",
-    accent: "coral",
-    body: "I rarely want to learn something purely theoretically. A dataset becomes a pipeline, a pipeline becomes a model, a model feeds a dashboard, a dashboard becomes a decision tool — and AI sits across the whole workflow, automating the repetitive parts.",
-    quote: "If I want to understand a technology, I want to build something with it.",
-  },
-  {
-    numeral: "VI",
-    title: "The Person Behind the Career",
+    title: "From systems toward possibilities",
+    quote: "Continuously figuring things out",
     accent: "amber",
-    body: "Curious, sometimes about too many things at once — analytics to cloud, AI to automation, portfolio to open source. But the thread is constant: I like breaking complicated things into pieces and finding the more efficient way.",
-    quote: "Technology gives curiosity somewhere to go.",
+    body: "I'm not chasing a title. I'm looking for work at the intersection of data, technology and business — real problems, varied teammates, room to grow — in India or internationally, hybrid or remote, and I'm open to relocation. The tools I use today will change; the point is to be someone capable of learning the next one. If my journey fits in one sentence, it's this: from maintaining systems, toward possibilities. What I know is that the most interesting part of the story may still be ahead.",
   },
-  {
-    numeral: "VII",
-    title: "What I Am Looking For",
-    accent: "teal",
-    body: "Work at the intersection of data, technology and business — real problems, diverse people, room to grow. Open to India and international. The tools will change; the goal is to become someone capable of learning the next one.",
-    quote: "Not to memorize technologies, but to learn the next one.",
-  },
-  {
-    numeral: "VIII",
-    title: "The Road Ahead",
-    accent: "amber",
-    body: "From maintaining systems, to analyzing data, to connecting analytics with business, to exploring how AI transforms how problems get solved. I don't know where the road ends — and I don't need to. I just want to keep moving.",
-    quote: "A story about continuously figuring things out.",
-  },
+];
+
+export const TARGET_ROLES = [
+  "Data Analyst",
+  "Business Analyst",
+  "BI Analyst",
+  "Product Analyst",
+  "Junior Data Scientist",
+  "Analytics Engineer",
+  "Junior Data Engineer",
+  "Junior AI Engineer",
 ];
 
 export const EXPERIENCE = [
@@ -194,38 +186,37 @@ export const EXPERIENCE = [
     role: "Product & Data Analytics Trainee",
     org: "NEOMA Incubator",
     place: "Rouen, France",
-    period: "May 2025 — Sep 2025 · 5 months",
-    accent: "amber",
+    period: "May – Sep 2025 · 5 months",
+    accent: "teal",
     bullets: [
-      "Collected and systematically analyzed 240+ student survey responses to surface recurring platform friction points, directly informing the prioritization of 3 core product features.",
-      "Defined measurable product KPIs and built a performance-tracking framework; presented insights to leadership that shaped 3 roadmap decisions.",
-      "Deployed an AI-powered platform with an FAQ chatbot on structured knowledge-base data — resolving 60%+ of student queries and cutting support load by 30%.",
+      "Analyzed 240+ student survey responses, surfacing recurring friction points that prioritized 3 core product features and converted qualitative feedback into measurable metrics.",
+      "Defined product KPIs and built a performance-tracking framework whose insights shaped 3 roadmap decisions presented to leadership.",
+      "Deployed an AI-powered chatbot on structured knowledge-base data, resolving 60%+ of student queries and cutting support load by 30%.",
     ],
-    stack: ["Python", "KPI Design", "LLM Chatbot", "Product Analytics"],
+    stack: ["Python", "SQL", "Survey Analytics", "KPI Design", "AI Chatbot"],
   },
   {
     role: "Systems Engineer — Data & Reporting Analytics",
     org: "Infosys",
     place: "Hyderabad, India",
-    period: "Sep 2021 — Aug 2023 · 2 years",
-    accent: "coral",
+    period: "Sep 2021 – Aug 2023 · 2 years",
+    accent: "amber",
     bullets: [
-      "Queried and analyzed large-scale incident log data with SQL to identify recurring failure patterns, applying root-cause analysis to improve system stability.",
-      "Designed and maintained Excel-based BI dashboards tracking SLA compliance and operational KPIs, translating raw log data into trackable metrics.",
-      "Performed SQL-based data validation and reconciliation across production migrations spanning 3 environments, protecting data integrity for downstream analysis.",
-      "Partnered with Network, BI and Operations teams inside Agile/Scrum to prioritize data requirements and deliver timely insights.",
+      "Queried and analyzed large-scale incident log data with SQL, applying root-cause analysis to recurring failure patterns and improving system stability.",
+      "Designed and maintained Excel-based BI dashboards tracking SLA compliance and operational KPIs — raw log data turned into trackable metrics.",
+      "Ran SQL-based validation and reconciliation across production migrations in 3 environments, protecting data integrity for downstream analysis.",
+      "Partnered with Network, BI and Operations teams in Agile/Scrum to prioritize data requirements and deliver insights on time.",
     ],
-    stack: ["Oracle Fusion Middleware", "SQL", "Linux", "ServiceNow", "Excel BI"],
+    stack: ["Oracle Fusion Middleware", "SQL", "Excel BI", "Linux", "ServiceNow", "Agile/Scrum"],
   },
   {
-    role: "Career Break — Professional Development",
-    org: "Self-directed",
-    place: "Hyderabad, India",
-    period: "Sep 2023 — Aug 2024 · 1 year",
-    accent: "teal",
+    role: "Professional Development",
+    org: "Career Break",
+    place: "Full-time upskilling",
+    period: "Sep 2023 – Aug 2024 · 1 year",
+    accent: "coral",
     bullets: [
-      "Dedicated full-time to upskilling in Python, statistics and machine learning fundamentals.",
-      "Prepared for and secured admission to the M.Sc. in Business Analytics at NEOMA Business School, France.",
+      "Dedicated full-time to Python, statistics and machine-learning fundamentals while preparing for M.Sc. Business Analytics admission in France.",
     ],
     stack: ["Python", "Statistics", "Machine Learning"],
   },
@@ -233,237 +224,290 @@ export const EXPERIENCE = [
     role: "Data Science Intern",
     org: "ShapeAI",
     place: "Remote, India",
-    period: "Mar 2021 — May 2021 · 3 months",
+    period: "Mar – May 2021 · 3 months",
     accent: "teal",
     bullets: [
-      "Applied Python (Pandas, NumPy) to clean, process and analyze 10,000+ records, identifying behavioral trends and anomalies.",
+      "Cleaned, processed and analyzed 10,000+ records with Python (Pandas, NumPy), identifying behavioral trends and anomalies.",
       "Designed interactive Tableau visualizations to communicate findings to non-technical stakeholders.",
     ],
     stack: ["Python", "Pandas", "NumPy", "Tableau"],
   },
 ];
 
-export type Project = {
+export interface Project {
   index: string;
   title: string;
   subtitle: string;
   objective: string;
   points: string[];
-  metrics: { v: string; l: string }[];
   tags: string[];
   accent: "amber" | "teal" | "coral";
-  featured?: boolean;
-};
+  metrics: { v: string; l: string }[];
+  featured: boolean;
+}
 
 export const PROJECTS: Project[] = [
   {
     index: "01",
-    title: "Financial Transactions Analytics",
-    subtitle: "13.3M+ banking transactions turned into risk & behaviour intelligence",
+    title: "Financial Transactions Dataset Analytics",
+    subtitle: "End-to-end analytics on 13.3M+ banking records",
     objective:
-      "An end-to-end financial analytics solution for customer spending behaviour, credit utilisation and operational risk on real-scale banking data.",
+      "Turn millions of raw banking transactions into decisions about segmentation, risk and operations — one unified analytical model across transaction, customer, card and merchant data.",
     points: [
-      "Integrated transaction, customer, card and merchant datasets into one unified analytical model.",
-      "Feature engineering with Pandas/NumPy — credit utilisation, debt-to-income ratio, temporal features, missing-value treatment.",
-      "SQLAlchemy-driven SQL workflows for complex business queries and scalable exploration.",
-      "Matplotlib, Seaborn and Plotly visualizations for behaviour, merchant performance and failure analysis (insufficient balance, PIN failures, technical errors).",
+      "Engineered features with Python (Pandas, NumPy): missing-value treatment, temporal extraction, credit utilization and debt-to-income ratios.",
+      "Built SQL analytical workflows for complex business queries at scale.",
+      "Profiled transaction failures and customer financial health to support risk segmentation and operational efficiency.",
     ],
-    metrics: [
-      { v: "13.3M+", l: "records processed" },
-      { v: "4", l: "datasets unified" },
-      { v: "3", l: "high-risk segments found" },
-    ],
-    tags: ["Python", "Pandas", "NumPy", "SQLAlchemy", "Plotly", "Seaborn"],
+    tags: ["Python", "Pandas", "SQL", "Plotly", "Feature Engineering"],
     accent: "amber",
+    metrics: [
+      { v: "13.3M+", l: "records" },
+      { v: "4", l: "datasets joined" },
+      { v: "3", l: "risk segments" },
+    ],
     featured: true,
   },
   {
     index: "02",
-    title: "Global AI Impact Analytics Dashboard",
-    subtitle: "Executive-ready Tableau intelligence on AI adoption, 2020–2025",
+    title: "Global AI Content Impact Dashboard",
+    subtitle: "AI adoption, workforce & sentiment across 10 industries",
     objective:
-      "An interactive BI dashboard analyzing AI adoption, revenue growth, workforce transformation and consumer sentiment across countries and industries.",
+      "An executive-ready Tableau dashboard that lets stakeholders compare AI adoption, revenue growth, consumer trust and workforce transformation across countries and industries.",
     points: [
-      "Integrated 200+ records across 20+ business metrics covering six years of AI adoption trends.",
-      "KPI cards, geographic visualizations, trend analyses and story-driven navigation in Tableau.",
-      "Compared adoption rates, revenue growth, consumer trust, job displacement and human–AI collaboration across regions.",
-      "Interactive filters enabled cross-industry exploratory analysis for strategic stakeholders.",
+      "Integrated 200+ records with 20+ business metrics covering AI adoption trends from 2020–2025.",
+      "Compared adoption rates, job displacement, human–AI collaboration and market share with interactive filters and story-driven navigation.",
+      "Surfaced which industries and regions pair the highest adoption with the strongest revenue growth.",
     ],
-    metrics: [
-      { v: "200+", l: "records · 20+ metrics" },
-      { v: "10×10", l: "industries × countries" },
-      { v: "6 yrs", l: "of trend coverage" },
-    ],
-    tags: ["Tableau", "KPI Reporting", "Data Storytelling", "Dashboard Design"],
+    tags: ["Tableau", "KPI Reporting", "Data Storytelling", "Geographic Viz"],
     accent: "teal",
+    metrics: [
+      { v: "200+", l: "records" },
+      { v: "10", l: "industries" },
+      { v: "6", l: "years of data" },
+    ],
     featured: true,
   },
   {
     index: "03",
     title: "Chronic Kidney Disease Prediction",
-    subtitle: "Decision-tree ML pipeline with a real-time Flask web application",
+    subtitle: "Machine learning for early clinical detection",
     objective:
-      "A machine-learning prediction system for early CKD detection from patient clinical data, deployed as an interactive web app.",
+      "A complete ML pipeline plus a Flask web app for early CKD detection from patient clinical data — supporting faster diagnosis and better healthcare decisions.",
     points: [
-      "Complete pipeline: missing-value treatment, label encoding, scaling, EDA via heatmaps and count plots.",
-      "Decision Tree classifier on the UCI CKD dataset — 400 records × 25 clinical attributes.",
-      "Evaluated with ROC analysis and confusion matrix; feature importance surfaced the top clinical risk indicators.",
-      "Flask + HTML/CSS interface for entering patient parameters and receiving real-time predictions.",
+      "Preprocessed 400 records × 25 clinical attributes: imputation, encoding, scaling, and visual EDA with heatmaps and count plots.",
+      "Trained a Decision Tree classifier evaluated with ROC analysis and confusion matrix; extracted top clinical risk indicators from feature importance.",
+      "Wrapped the model in a Flask app with an HTML/CSS interface for real-time predictions from patient parameters.",
     ],
-    metrics: [
-      { v: "93%", l: "classification accuracy" },
-      { v: "400", l: "patient records" },
-      { v: "25", l: "clinical attributes" },
-    ],
-    tags: ["Python", "Scikit-learn", "Pandas", "Flask", "Healthcare Analytics"],
+    tags: ["Python", "Scikit-learn", "Pandas", "Flask", "ML"],
     accent: "coral",
+    metrics: [
+      { v: "93%", l: "accuracy" },
+      { v: "400", l: "records" },
+      { v: "25", l: "attributes" },
+    ],
     featured: true,
   },
   {
     index: "04",
     title: "NEOMA Student Onboarding Platform",
-    subtitle: "AI-powered onboarding — from survey friction points to shipped features",
+    subtitle: "One interface for the entire arrival journey",
     objective:
-      "A centralized digital platform streamlining onboarding for international students, consolidating academic, administrative and campus resources.",
+      "A centralized platform for international students — academic processes, housing, transport and campus services in one place — born from real onboarding friction.",
     points: [
-      "Mapped onboarding pain points from 240+ survey responses into functional platform features.",
-      "AI chatbot built on structured knowledge-base data resolved 60%+ of repetitive queries.",
-      "Behavioural tracking and predictive modeling personalized user journeys.",
-      "Cut support load by ~30% and demonstrated process standardization for university workflows.",
+      "Mapped recurring pain points (scattered information, repetitive admin queries) into functional features.",
+      "Applied user-centric design to cut information fragmentation and standardize onboarding workflows.",
     ],
-    metrics: [
-      { v: "60%+", l: "queries auto-resolved" },
-      { v: "−30%", l: "support load" },
-      { v: "3", l: "features prioritized" },
-    ],
-    tags: ["Supabase", "Lovable", "AI Chatbot", "UX", "Product Analytics"],
+    tags: ["Lovable", "Supabase", "Business Analysis", "UX"],
     accent: "amber",
-    featured: true,
+    metrics: [
+      { v: "1", l: "unified hub" },
+      { v: "60%+", l: "queries automated" },
+    ],
+    featured: false,
   },
   {
     index: "05",
-    title: "Airline Financial Data Analytics",
-    subtitle: "Cloud ELT workflow — BigQuery, Dataform & Looker Studio",
+    title: "Business Intelligence & Dashboard Suite",
+    subtitle: "KPI monitoring built around business questions",
     objective:
-      "Analysis of airline financial datasets — revenue, operating profit/loss, net income — on a GCP-native analytics stack.",
+      "Interactive Power BI and Tableau dashboards that translate raw datasets into structured analytical views — designed around decisions, not decorations.",
     points: [
-      "Cleaned and transformed multi-year financial datasets for analytical use.",
-      "Designed analytical queries and KPI-focused reporting structures.",
-      "Explored a cloud workflow across Cloud Storage, BigQuery, BigQuery ML, Dataform and Looker Studio.",
+      "Built KPI dashboards for monitoring and executive reporting across multiple datasets.",
+      "Prepared data with SQL so every visual answered an actual business question.",
     ],
-    metrics: [
-      { v: "GCS → BQ", l: "cloud ELT flow" },
-      { v: "KPI", l: "reporting structures" },
-    ],
-    tags: ["BigQuery", "Dataform", "Looker Studio", "GCP", "SQL"],
+    tags: ["Power BI", "Tableau", "Excel", "SQL"],
     accent: "teal",
+    metrics: [
+      { v: "10+", l: "dashboards" },
+      { v: "3", l: "BI tools" },
+    ],
+    featured: false,
+  },
+];
+
+export const AI_TOOLS = [
+  {
+    name: "ChatGPT",
+    mark: "gpt",
+    use: "Exploration partner — quick analysis, drafting and rapid prototyping of ideas.",
   },
   {
-    index: "06",
-    title: "AI-Powered Job Search Automation",
-    subtitle: "Treating the job hunt itself as a system to be optimized",
-    objective:
-      "An AI-assisted workflow that identifies relevant roles, extracts requirements, tailors applications and tracks everything automatically.",
-    points: [
-      "LLM-powered extraction of required skills from job descriptions.",
-      "Automated resume tailoring and cover-letter generation from a master resume.",
-      "ATS-oriented skill matching, recruiter discovery and structured application tracking.",
-    ],
-    metrics: [
-      { v: "n8n", l: "orchestration" },
-      { v: "LLM", l: "extraction & tailoring" },
-    ],
-    tags: ["n8n", "Claude API", "Ollama", "Python", "Automation"],
-    accent: "coral",
+    name: "Claude & Claude API",
+    mark: "claude",
+    use: "Long-context reasoning inside automated workflows — summarizing, extracting, deciding.",
+  },
+  {
+    name: "n8n",
+    mark: "n8n",
+    use: "The glue: visual automation orchestrating LLM calls, data and triggers.",
+  },
+  {
+    name: "Ollama",
+    mark: "ollama",
+    use: "Local LLM lab — private on-device models for extraction and summarization.",
+  },
+  {
+    name: "LLM APIs",
+    mark: "api",
+    use: "Prompt engineering and structured outputs wired into automated pipelines.",
+  },
+  {
+    name: "Supabase",
+    mark: "db",
+    use: "Postgres backbone storing workflow state, knowledge bases and app data.",
   },
 ];
 
 export const PIPELINE = [
-  { step: "01", name: "Discover", desc: "Aggregate relevant openings from job boards", tool: "Python · APIs" },
-  { step: "02", name: "Extract", desc: "Parse requirements & skills from descriptions", tool: "Claude / GPT API" },
-  { step: "03", name: "Match", desc: "Score fit against the master resume", tool: "Embeddings · SQL" },
-  { step: "04", name: "Tailor", desc: "Resume + cover letter per opportunity", tool: "n8n · LLM" },
-  { step: "05", name: "Track", desc: "Applications in a structured database", tool: "Supabase" },
-  { step: "06", name: "Refine", desc: "Experiment, measure, improve the loop", tool: "Ollama · local LLM" },
+  {
+    step: "01",
+    name: "Ingest",
+    desc: "Pull raw data in — files, webhooks, databases and feeds.",
+    tool: "n8n triggers",
+  },
+  {
+    step: "02",
+    name: "Clean",
+    desc: "Normalize, dedupe and validate into one tidy shape.",
+    tool: "Python · SQL",
+  },
+  {
+    step: "03",
+    name: "Analyze",
+    desc: "Run the metrics, models and queries that matter.",
+    tool: "BigQuery · Pandas",
+  },
+  {
+    step: "04",
+    name: "Generate",
+    desc: "An LLM drafts the summary, insight or next-step note.",
+    tool: "Claude API · Ollama",
+  },
+  {
+    step: "05",
+    name: "Review",
+    desc: "A human checks the draft — AI suggests, people decide.",
+    tool: "human-in-the-loop",
+  },
+  {
+    step: "06",
+    name: "Ship",
+    desc: "Push to a dashboard, report or alert automatically.",
+    tool: "Power BI · webhooks",
+  },
 ];
 
-export const AI_TOOLS = [
-  { name: "ChatGPT", use: "analysis copilot & sounding board", mark: "gpt" },
-  { name: "Claude", use: "long-context extraction & writing", mark: "claude" },
-  { name: "n8n", use: "workflow orchestration with LLM nodes", mark: "n8n" },
-  { name: "Ollama", use: "local LLM experiments & private inference", mark: "ollama" },
-  { name: "LLM APIs", use: "OpenAI & Anthropic in Python pipelines", mark: "api" },
-  { name: "Supabase", use: "structured tracking + vector-friendly storage", mark: "db" },
-];
-
-export const SKILL_BARS = [
-  { name: "SQL & Data Modeling", level: 90, note: "window functions · CTEs · BigQuery" },
-  { name: "BI & Dashboards", level: 88, note: "Power BI · Tableau · Looker Studio" },
-  { name: "Python for Analytics", level: 85, note: "Pandas · NumPy · SQLAlchemy" },
-  { name: "GenAI & Prompt Engineering", level: 82, note: "Claude · GPT · Ollama · RAG-style KBs" },
-  { name: "ETL / ELT & Pipelines", level: 78, note: "Dataform · validation · transformation" },
-  { name: "Statistics & Machine Learning", level: 76, note: "regression · classification · A/B testing" },
-  { name: "Automation & AI Workflows", level: 74, note: "n8n · APIs · Python scripting" },
-  { name: "Cloud Data Platforms", level: 70, note: "GCP · BigQuery · Snowflake · Redshift" },
+export const SKILL_AREAS = [
+  {
+    name: "Data Analytics",
+    note: "SQL · Python · R · EDA · data cleaning & wrangling",
+  },
+  {
+    name: "Business Intelligence",
+    note: "Power BI · Tableau · Excel · dashboard design & storytelling",
+  },
+  {
+    name: "Statistics & Machine Learning",
+    note: "Regression · classification · clustering · A/B testing · time series",
+  },
+  {
+    name: "Cloud & Data Engineering",
+    note: "GCP · BigQuery · ETL/ELT · data modeling & validation",
+  },
+  {
+    name: "AI & Automation",
+    note: "Generative AI · prompt engineering · n8n · Ollama workflows",
+  },
 ];
 
 export const TOOLKIT = [
-  { group: "Programming", items: ["Python", "SQL", "R", "JavaScript", "Shell Scripting"] },
-  { group: "BI & Visualization", items: ["Power BI", "Tableau", "Excel", "Looker Studio", "Matplotlib", "Plotly"] },
-  { group: "Cloud & Data", items: ["GCP", "BigQuery", "Cloud Storage", "Snowflake", "Redshift"] },
-  { group: "Data Engineering", items: ["ETL/ELT", "Dataform", "Data Modeling", "Data Validation", "SQLAlchemy"] },
-  { group: "ML & Statistics", items: ["Scikit-learn", "Regression", "Classification", "Clustering", "A/B Testing", "Time Series"] },
-  { group: "AI & Automation", items: ["Generative AI", "Prompt Engineering", "LLM APIs", "Ollama", "n8n", "Chatbots"] },
-  { group: "Enterprise Tech", items: ["Oracle Fusion Middleware", "Linux", "ServiceNow", "Agile / Scrum"] },
-  { group: "Development", items: ["Git", "GitHub", "Flask", "HTML/CSS", "API Integration", "Supabase"] },
+  { group: "Programming", items: ["Python", "SQL", "R", "JavaScript"] },
+  {
+    group: "BI & Visualization",
+    items: ["Power BI", "Tableau", "Excel", "Looker Studio", "Matplotlib", "Plotly"],
+  },
+  { group: "Cloud & Data", items: ["GCP", "BigQuery", "Cloud Storage", "ETL / ELT"] },
+  { group: "Databases", items: ["SQL", "Oracle", "PostgreSQL"] },
+  {
+    group: "ML & Statistics",
+    items: ["Scikit-learn", "Pandas", "NumPy", "Hypothesis Testing", "Time Series"],
+  },
+  {
+    group: "Enterprise Tech",
+    items: ["Oracle Fusion Middleware", "Linux", "ServiceNow"],
+  },
+  {
+    group: "AI & Automation",
+    items: ["Generative AI", "Prompt Engineering", "n8n", "Ollama", "AI Workflows"],
+  },
+  { group: "Development", items: ["Git", "GitHub", "HTML", "CSS"] },
 ];
 
 export const EDUCATION = [
   {
-    degree: "M.Sc. Business Analytics",
     school: "NEOMA Business School",
+    degree: "M.Sc. Business Analytics",
+    period: "Sep 2024 – Dec 2025",
     place: "Rouen, France",
-    period: "Sep 2024 — Dec 2025",
-    accent: "amber",
     coursework: [
-      "Data Visualization & Storytelling", "Python & R for Business Analytics",
-      "Enterprise Data Management", "Applied Business Analytics", "Predictive Analytics",
-      "Machine Learning", "Statistics", "Data Modeling",
+      "Data Visualization & Storytelling",
+      "Python & R for Business Analytics",
+      "Enterprise Data Management",
+      "Applied Business Analytics",
     ],
+    accent: "teal",
   },
   {
-    degree: "B.E. Computer Science & Engineering",
     school: "Stanley College of Engineering & Technology",
+    degree: "B.E. Computer Science & Engineering",
+    period: "Aug 2017 – Jul 2021",
     place: "Hyderabad, India",
-    period: "Aug 2017 — Jul 2021",
-    accent: "teal",
     coursework: [
-      "Data Structures", "Algorithms", "Database Management Systems",
-      "Artificial Intelligence", "Data Mining", "Machine Learning",
+      "Data Structures",
+      "Algorithms",
+      "DBMS",
+      "Artificial Intelligence",
+      "Data Mining",
+      "Machine Learning",
     ],
+    accent: "amber",
   },
 ];
 
 export const CERTIFICATIONS = [
   { name: "Data Analysis with Excel Pivot Tables", issuer: "365 Financial Analyst", date: "Mar 2026" },
   { name: "Alteryx Bootcamp", issuer: "Udemy", date: "Feb 2026" },
-  { name: "The Complete Agile & Scrum Project Management Course", issuer: "Udemy", date: "Jan 2026" },
-  { name: "Introduction to Generative AI and Agents", issuer: "Microsoft", date: "Dec 2025" },
-  { name: "The Product Management for AI & Data Science Course", issuer: "Udemy", date: "Dec 2025" },
+  { name: "Agile & Scrum Project Management", issuer: "Udemy", date: "Jan 2026" },
+  { name: "Intro to Generative AI & Agents", issuer: "Microsoft", date: "Dec 2025" },
+  { name: "Product Management for AI & Data Science", issuer: "Udemy", date: "Dec 2025" },
   { name: "Practical A/B Testing", issuer: "LinkedIn Learning", date: "Sep 2025" },
-  { name: "R for Data Science: Analysis and Visualization", issuer: "LinkedIn Learning", date: "Jan 2025" },
-  { name: "Data Analytics and Visualization Virtual Experience", issuer: "Accenture", date: "Jul 2023" },
-  { name: "Machine Learning", issuer: "SmartBridge Educational Services", date: "Jun 2020" },
+  { name: "R for Data Science", issuer: "LinkedIn Learning", date: "Jan 2025" },
+  { name: "Data Analytics & Visualization VEP", issuer: "Accenture", date: "Jul 2023" },
+  { name: "Machine Learning", issuer: "SmartBridge", date: "Jun 2020" },
 ];
 
 export const LANGUAGES = [
+  { name: "English", level: "C2", pct: 98 },
   { name: "Telugu", level: "Native", pct: 100 },
-  { name: "English", level: "C2 · Professional", pct: 96 },
-  { name: "Hindi", level: "C2 · Professional", pct: 92 },
-  { name: "French", level: "A2 · Learning", pct: 38 },
-];
-
-export const TARGET_ROLES = [
-  "Data Analyst", "Business Analyst", "BI Analyst", "Product Analyst",
-  "Analytics Engineer", "Junior Data Engineer", "Junior AI Engineer",
+  { name: "Hindi", level: "C2", pct: 96 },
 ];
