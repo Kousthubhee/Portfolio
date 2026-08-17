@@ -17,7 +17,7 @@ export default function Chapters() {
               and <span className="text-transparent [-webkit-text-stroke:1.3px_#ffb224]">possibilities</span>
             </>
           }
-          note="Four chapters, condensed from eight. The full story is one of decisions, experiments, failures and moments of trying something slightly beyond my current capabilities."
+          note="The full story is one of decisions, experiments, failures and moments of trying something slightly beyond my current capabilities."
         />
 
         <p className="max-w-2xl -mt-6 mb-12 text-[15px] leading-relaxed text-muted">

@@ -65,13 +65,6 @@ export const TICKER = [
   "Data Storytelling",
 ];
 
-export const ROUTE = [
-  { code: "IN", city: "India", years: "roots · 2017–23" },
-  { code: "FR", city: "France", years: "M.Sc. · 2024–25" },
-  { code: "IN", city: "India", years: "back · now" },
-  { code: "?", city: "next stop", years: "looking forward to it" },
-];
-
 export const MILESTONES = [
   {
     period: "Now",
@@ -85,11 +78,11 @@ export const MILESTONES = [
   },
   {
     period: "May – Sep 2025",
-    tag: "Traineeship",
-    title: "Product & Data Analytics Trainee",
-    org: "NEOMA Incubator",
+    tag: "Venture Studio",
+    title: "Data & Product Analytics Lead",
+    org: "NEOMA Business School Incubator",
     place: "Rouen, France",
-    text: "Turned 240+ survey responses into 3 prioritized features, built the KPI framework behind 3 roadmap decisions, and deployed an AI chatbot resolving 60%+ of queries.",
+    text: "Turned 240+ survey responses into product requirements, ran A/B tests on user flows, and cut repetitive support queries by 30% with an AI-powered FAQ module.",
     accent: "teal",
   },
   {
@@ -113,16 +106,16 @@ export const MILESTONES = [
   {
     period: "Sep 2021 – Aug 2023",
     tag: "Systems",
-    title: "Systems Engineer — Data & Reporting",
+    title: "Systems Engineer — Data Operations & BI Support",
     org: "Infosys",
-    place: "Hyderabad, India",
-    text: "SQL on large-scale incident logs, Excel BI dashboards for SLA KPIs, and migration validation across 3 environments — where I learned how systems really behave.",
+    place: "Hyderabad (Remote), India",
+    text: "Automated SLA reporting from ServiceNow via SQL, managed access control, and validated OBIEE migrations across 3 environments — where I learned how systems really behave.",
     accent: "amber",
   },
   {
     period: "Mar – May 2021",
     tag: "Internship",
-    title: "Data Science Intern",
+    title: "Data Analytics Intern",
     org: "ShapeAI",
     place: "Remote, India",
     text: "Cleaned and analyzed 10,000+ records with Pandas and NumPy; learned to present findings to non-technical stakeholders through Tableau.",
@@ -183,31 +176,32 @@ export const TARGET_ROLES = [
 
 export const EXPERIENCE = [
   {
-    role: "Product & Data Analytics Trainee",
-    org: "NEOMA Incubator",
+    role: "Data & Product Analytics Lead",
+    org: "NEOMA Business School Incubator — Venture Studio",
     place: "Rouen, France",
     period: "May – Sep 2025 · 5 months",
     accent: "teal",
     bullets: [
-      "Analyzed 240+ student survey responses, surfacing recurring friction points that prioritized 3 core product features and converted qualitative feedback into measurable metrics.",
-      "Defined product KPIs and built a performance-tracking framework whose insights shaped 3 roadmap decisions presented to leadership.",
-      "Deployed an AI-powered chatbot on structured knowledge-base data, resolving 60%+ of student queries and cutting support load by 30%.",
+      "Spearheaded user research across 240+ international students, using statistical analysis of qualitative survey data to pinpoint critical onboarding friction points.",
+      "Translated insights into product requirements, co-developing a centralized platform that eliminated fragmented peer-to-peer querying and improved data accessibility.",
+      "Designed and executed A/B tests on user flows and integrated an AI-powered FAQ module that cut repetitive support queries by 30%, validating core product hypotheses.",
+      "Pitched data-backed product concepts to university executives — securing selection into the competitive NEOMA Venture Studio and delivering a full analytics report.",
     ],
-    stack: ["Python", "SQL", "Survey Analytics", "KPI Design", "AI Chatbot"],
+    stack: ["User Research", "A/B Testing", "Product Analytics", "AI FAQ Module", "SQL", "Python"],
   },
   {
-    role: "Systems Engineer — Data & Reporting Analytics",
+    role: "Systems Engineer — Data Operations & BI Support",
     org: "Infosys",
-    place: "Hyderabad, India",
+    place: "Hyderabad (Remote), India",
     period: "Sep 2021 – Aug 2023 · 2 years",
     accent: "amber",
     bullets: [
-      "Queried and analyzed large-scale incident log data with SQL, applying root-cause analysis to recurring failure patterns and improving system stability.",
-      "Designed and maintained Excel-based BI dashboards tracking SLA compliance and operational KPIs — raw log data turned into trackable metrics.",
-      "Ran SQL-based validation and reconciliation across production migrations in 3 environments, protecting data integrity for downstream analysis.",
-      "Partnered with Network, BI and Operations teams in Agile/Scrum to prioritize data requirements and deliver insights on time.",
+      "Automated SLA compliance and ticket-volume reporting by extracting incident data from ServiceNow via SQL, cutting manual reporting time for Network and BI teams by 40%.",
+      "Enforced data security and role-based access control by managing database user permissions via SQL — 100% compliance with enterprise IT governance policies.",
+      "Executed data validation and reconciliation across Oracle BI (OBIEE) RPD migrations spanning 3 production environments, resolving integrity issues for downstream financial reporting.",
+      "Partnered with Network, BI and Operations teams in Agile/Scrum to troubleshoot middleware incidents, prioritizing critical reporting requirements via Jira and Confluence.",
     ],
-    stack: ["Oracle Fusion Middleware", "SQL", "Excel BI", "Linux", "ServiceNow", "Agile/Scrum"],
+    stack: ["SQL", "ServiceNow", "Oracle BI (OBIEE)", "Oracle Fusion Middleware", "Agile/Scrum", "Jira", "Confluence"],
   },
   {
     role: "Professional Development",
@@ -221,14 +215,14 @@ export const EXPERIENCE = [
     stack: ["Python", "Statistics", "Machine Learning"],
   },
   {
-    role: "Data Science Intern",
+    role: "Data Analytics Intern",
     org: "ShapeAI",
     place: "Remote, India",
     period: "Mar – May 2021 · 3 months",
     accent: "teal",
     bullets: [
-      "Cleaned, processed and analyzed 10,000+ records with Python (Pandas, NumPy), identifying behavioral trends and anomalies.",
-      "Designed interactive Tableau visualizations to communicate findings to non-technical stakeholders.",
+      "Applied Python (Pandas, NumPy) to clean, process and analyze 10,000+ records, identifying behavioral trends and anomalies that informed business rules.",
+      "Designed interactive Tableau dashboards to communicate analytical findings and KPIs to non-technical stakeholders, driving actionable business recommendations.",
     ],
     stack: ["Python", "Pandas", "NumPy", "Tableau"],
   },
@@ -327,55 +321,40 @@ export const PROJECTS: Project[] = [
   },
   {
     index: "05",
-    title: "Business Intelligence & Dashboard Suite",
-    subtitle: "KPI monitoring built around business questions",
+    title: "Everyday AI Automation",
+    subtitle: "An ongoing bench of LLM experiments",
     objective:
-      "Interactive Power BI and Tableau dashboards that translate raw datasets into structured analytical views — designed around decisions, not decorations.",
+      "Not a production system — a running set of experiments asking how far AI can take the repetitive parts of analytics: extraction, summarization, drafting, chatbots and small tools.",
     points: [
-      "Built KPI dashboards for monitoring and executive reporting across multiple datasets.",
-      "Prepared data with SQL so every visual answered an actual business question.",
+      "Chained LLM calls, data and triggers into repeatable flows with n8n and Claude; ran local models through Ollama and LM Studio for private extraction and summarization.",
+      "Prototyped interfaces and tools via vibe-coding with Lovable and Bolt, and explored coding agents like Qwen Code and Opencode along the way.",
     ],
-    tags: ["Power BI", "Tableau", "Excel", "SQL"],
-    accent: "teal",
+    tags: ["n8n", "Claude", "Ollama", "LM Studio", "Lovable", "Bolt", "Qwen Code"],
+    accent: "coral",
     metrics: [
-      { v: "10+", l: "dashboards" },
-      { v: "3", l: "BI tools" },
+      { v: "6+", l: "tools in rotation" },
+      { v: "now", l: "& ongoing" },
     ],
     featured: false,
   },
 ];
 
 export const AI_TOOLS = [
-  {
-    name: "ChatGPT",
-    mark: "gpt",
-    use: "Exploration partner — quick analysis, drafting and rapid prototyping of ideas.",
-  },
-  {
-    name: "Claude & Claude API",
-    mark: "claude",
-    use: "Long-context reasoning inside automated workflows — summarizing, extracting, deciding.",
-  },
-  {
-    name: "n8n",
-    mark: "n8n",
-    use: "The glue: visual automation orchestrating LLM calls, data and triggers.",
-  },
-  {
-    name: "Ollama",
-    mark: "ollama",
-    use: "Local LLM lab — private on-device models for extraction and summarization.",
-  },
-  {
-    name: "LLM APIs",
-    mark: "api",
-    use: "Prompt engineering and structured outputs wired into automated pipelines.",
-  },
-  {
-    name: "Supabase",
-    mark: "db",
-    use: "Postgres backbone storing workflow state, knowledge bases and app data.",
-  },
+  { name: "ChatGPT", mark: "gpt" },
+  { name: "Claude & Claude API", mark: "claude" },
+  { name: "n8n", mark: "n8n" },
+  { name: "Ollama", mark: "ollama" },
+  { name: "LLM APIs", mark: "api" },
+  { name: "Supabase", mark: "db" },
+];
+
+export const AI_ALSO = [
+  "LM Studio",
+  "Qwen Code",
+  "Opencode",
+  "Lovable",
+  "Bolt",
+  "…and whatever the ecosystem ships next",
 ];
 
 export const PIPELINE = [
@@ -510,4 +489,5 @@ export const LANGUAGES = [
   { name: "English", level: "C2", pct: 98 },
   { name: "Telugu", level: "Native", pct: 100 },
   { name: "Hindi", level: "C2", pct: 96 },
+  { name: "French", level: "A2 · beginner", pct: 28 },
 ];

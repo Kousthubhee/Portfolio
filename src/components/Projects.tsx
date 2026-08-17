@@ -188,19 +188,6 @@ export default function Projects() {
           })}
         </div>
 
-        <Reveal delay={100}>
-          <div className="mt-10 flex justify-center">
-            <a
-              href={PROFILE.github}
-              target="_blank"
-              rel="noreferrer"
-              className="group inline-flex items-center gap-3 border border-line px-6 py-3.5 font-mono text-[12px] tracking-[0.14em] uppercase text-muted hover:text-ink-950 hover:bg-teal hover:border-teal transition-all"
-            >
-              More experiments on GitHub
-              <ArrowIcon className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-            </a>
-          </div>
-        </Reveal>
       </div>
     </section>
   );

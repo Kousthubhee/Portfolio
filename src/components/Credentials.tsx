@@ -118,8 +118,8 @@ export default function Credentials() {
                   ))}
                 </div>
                 <p className="mt-6 border-t border-line/70 pt-4 font-mono text-[10.5px] leading-relaxed text-faint">
-                  Comfortable presenting and collaborating in English and Hindi;
-                  Telugu is home.
+                  French at A2 — a year in Normandy gave me the accent; the
+                  vocabulary is still a work in progress.
                 </p>
               </div>
             </Reveal>

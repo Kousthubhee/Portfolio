@@ -28,9 +28,9 @@ export default function Experience() {
 
             <div className="mt-7 border border-line bg-ink-900/60 divide-y divide-line">
               {[
-                { k: "Enterprise ops", v: "2 years · Infosys" },
-                { k: "Product analytics", v: "5 months · NEOMA Incubator" },
-                { k: "Data science", v: "3 months · ShapeAI" },
+                { k: "Data & product lead", v: "5 months · NEOMA Venture Studio" },
+                { k: "Data operations & BI", v: "2 years · Infosys" },
+                { k: "Data analytics", v: "3 months · ShapeAI" },
                 { k: "Deliberate upskilling", v: "1 year · self-directed" },
               ].map((r) => (
                 <div key={r.k} className="flex items-center justify-between px-4 py-3">

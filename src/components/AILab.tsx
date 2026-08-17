@@ -1,5 +1,5 @@
 import type { CSSProperties } from "react";
-import { AI_TOOLS, PIPELINE } from "../lib/data";
+import { AI_ALSO, AI_TOOLS, PIPELINE } from "../lib/data";
 import { Reveal } from "../lib/hooks";
 import { SectionHeading } from "./Shared";
 
@@ -116,24 +116,38 @@ export default function AILab() {
           </div>
         </div>
 
-        {/* tools */}
-        <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        {/* tools — marks & names, no sales pitch */}
+        <div className="mt-14 grid grid-cols-3 sm:grid-cols-6 gap-3">
           {AI_TOOLS.map((t, i) => (
-            <Reveal key={t.name} delay={i * 70} y={26}>
-              <div className="group flex items-start gap-4 border border-line bg-ink-900/60 px-5 py-5 transition-all duration-300 hover:-translate-y-1 hover:border-teal/50">
-                <span className="text-teal shrink-0 mt-0.5 transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-6">
+            <Reveal key={t.name} delay={i * 60} y={22}>
+              <div className="group flex h-full flex-col items-center justify-center gap-3 border border-line bg-ink-900/60 px-3 py-6 transition-all duration-300 hover:-translate-y-1 hover:border-teal/60 hover:bg-ink-850">
+                <span className="text-teal transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-6">
                   <ToolMark mark={t.mark} />
                 </span>
-                <div>
-                  <h3 className="font-display font-semibold text-[1.05rem] text-paper leading-none">
-                    {t.name}
-                  </h3>
-                  <p className="mt-1.5 font-mono text-[11px] leading-relaxed text-muted">{t.use}</p>
-                </div>
+                <span className="text-center font-mono text-[10.5px] leading-snug tracking-[0.06em] text-muted transition-colors group-hover:text-paper">
+                  {t.name}
+                </span>
               </div>
             </Reveal>
           ))}
         </div>
+
+        {/* also in rotation — kept deliberately low-key */}
+        <Reveal delay={160}>
+          <div className="mt-4 flex flex-wrap items-center gap-2 border border-dashed border-line bg-ink-950/40 px-4 py-3.5">
+            <span className="mr-1 font-mono text-[10px] tracking-[0.22em] uppercase text-faint">
+              also in rotation —
+            </span>
+            {AI_ALSO.map((n) => (
+              <span
+                key={n}
+                className="font-mono text-[10.5px] px-2 py-0.5 border border-line/70 text-faint transition-colors hover:text-teal hover:border-teal/50"
+              >
+                {n}
+              </span>
+            ))}
+          </div>
+        </Reveal>
 
         {/* experiments strip */}
         <Reveal delay={120}>

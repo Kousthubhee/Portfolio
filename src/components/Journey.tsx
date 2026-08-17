@@ -1,5 +1,4 @@
-import type { CSSProperties } from "react";
-import { MILESTONES, ROUTE } from "../lib/data";
+import { MILESTONES } from "../lib/data";
 import { Reveal, useInView } from "../lib/hooks";
 import { ACCENT, SectionHeading } from "./Shared";
 
@@ -24,70 +23,8 @@ export default function Journey() {
           note="A career rarely moves in a straight line. Mine moved across continents — systems first, then data, then the decisions behind the data."
         />
 
-        {/* flight strip */}
-        <Reveal>
-          <div className="tick-card border border-line bg-ink-900/60 px-6 py-6 sm:px-10" style={{ "--tick": "#3ad6c3" } as CSSProperties}>
-            <div className="grid grid-cols-[1fr_auto_1fr_auto_1fr_auto_1fr] items-center gap-1.5 sm:gap-5">
-              {ROUTE.map((r, i) => {
-                const unknown = r.code === "?";
-                const last = i === ROUTE.length - 1;
-                return (
-                  <div key={`${r.code}-${i}`} className="contents">
-                    <div
-                      className={`flex flex-col ${
-                        i === 0
-                          ? "items-start"
-                          : last
-                          ? "items-end text-right"
-                          : "items-center text-center"
-                      }`}
-                    >
-                      <span
-                        className={`font-display font-semibold text-xl sm:text-3xl tracking-wide ${
-                          unknown
-                            ? "text-transparent [-webkit-text-stroke:1.5px_#ffb224]"
-                            : "text-paper"
-                        }`}
-                      >
-                        {r.code}
-                      </span>
-                      <span className="font-mono text-[10px] sm:text-[11px] text-muted mt-1">
-                        {r.city}
-                      </span>
-                      <span
-                        className={`font-mono text-[10px] mt-0.5 ${
-                          i === 2 ? "text-teal" : unknown ? "text-amber" : "text-faint"
-                        }`}
-                      >
-                        {r.years}
-                      </span>
-                    </div>
-                    {i < ROUTE.length - 1 && (
-                      <svg className="w-full max-w-[52px] sm:max-w-[120px] h-6 sm:h-8 text-faint" viewBox="0 0 160 32" fill="none" preserveAspectRatio="none" aria-hidden="true">
-                        <path
-                          d="M4 22 C 50 4, 110 4, 156 22"
-                          stroke={i === ROUTE.length - 2 ? "#ffb224" : "currentColor"}
-                          strokeWidth="1.4"
-                          strokeDasharray={i === ROUTE.length - 2 ? "2 7" : undefined}
-                          strokeLinecap="round"
-                          className={i === ROUTE.length - 2 ? "" : "anim-dash"}
-                          opacity={i === ROUTE.length - 2 ? 0.85 : 1}
-                        />
-                        <path
-                          d="M146 14 l12 7 -14 3 4 -4 -6 -2 4 -4Z"
-                          fill={i === ROUTE.length - 2 ? "#ffb224" : "#3ad6c3"}
-                        />
-                      </svg>
-                    )}
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-        </Reveal>
-
         {/* timeline */}
-        <div ref={ref} className="relative mt-16 lg:mt-20">
+        <div ref={ref} className="relative mt-4 lg:mt-6">
           {/* rail */}
           <div className="absolute left-[7px] md:left-1/2 md:-translate-x-1/2 top-2 bottom-2 w-px bg-line" />
           <div
