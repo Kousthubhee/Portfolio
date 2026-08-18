@@ -16,7 +16,7 @@ export default function Contact() {
         <Reveal delay={90}>
           <h2 className="mt-5 max-w-4xl font-display font-semibold text-4xl sm:text-5xl lg:text-[4.2rem] leading-[1.02] tracking-[-0.01em] text-paper">
             The most interesting part of the story{" "}
-            <span className="text-transparent [-webkit-text-stroke:1.5px_#3ad6c3]">
+            <span className="font-cursive font-semibold text-[1.1em] text-teal">
               may still be ahead.
             </span>
           </h2>
@@ -57,13 +57,16 @@ export default function Contact() {
           >
             {PROFILE.email}
           </a>
+          <p className="mt-2 font-cursive font-semibold text-2xl text-coral rotate-[-1.5deg]">
+            — I usually reply within a day
+          </p>
         </Reveal>
 
         <Reveal delay={360}>
           <div className="mt-9 flex flex-wrap gap-4">
             <a
               href={`mailto:${PROFILE.email}?subject=Opportunity%20for%20Kousthubhee`}
-              className="group inline-flex items-center gap-3 bg-amber text-ink-950 font-mono text-[12px] font-semibold tracking-[0.14em] uppercase px-6 py-3.5 transition-all hover:-translate-y-0.5 hover:shadow-[0_10px_30px_rgba(255,178,36,0.28)]"
+              className="group inline-flex items-center gap-3 bg-amber text-[#fdfcf7] font-mono text-[12px] font-semibold tracking-[0.14em] uppercase px-6 py-3.5 transition-all hover:-translate-y-0.5 hover:shadow-[0_12px_28px_rgba(196,131,10,0.35)]"
             >
               <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
                 <rect x="1.5" y="3" width="11" height="8" stroke="currentColor" strokeWidth="1.4" />
@@ -75,7 +78,7 @@ export default function Contact() {
               href={PROFILE.whatsapp}
               target="_blank"
               rel="noreferrer"
-              className="group inline-flex items-center gap-3 bg-[#25D366] text-ink-950 font-mono text-[12px] font-semibold tracking-[0.14em] uppercase px-6 py-3.5 transition-all hover:-translate-y-0.5 hover:shadow-[0_10px_30px_rgba(37,211,102,0.3)]"
+              className="group inline-flex items-center gap-3 bg-[#25D366] text-[#fdfcf7] font-mono text-[12px] font-semibold tracking-[0.14em] uppercase px-6 py-3.5 transition-all hover:-translate-y-0.5 hover:shadow-[0_12px_28px_rgba(37,211,102,0.4)]"
             >
               <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
                 <path d="M7 1.6a5.4 5.4 0 0 0-4.65 8.14L1.6 12.4l2.72-.71A5.4 5.4 0 1 0 7 1.6Z" stroke="currentColor" strokeWidth="1.25" strokeLinejoin="round" />
@@ -109,7 +112,7 @@ export default function Contact() {
                 href={s.href}
                 target="_blank"
                 rel="noreferrer"
-                className="group inline-flex items-center gap-2.5 border border-line px-5 py-3.5 font-mono text-[12px] tracking-[0.12em] uppercase text-muted hover:text-ink-950 hover:bg-teal hover:border-teal transition-all"
+                className="group inline-flex items-center gap-2.5 border border-line px-5 py-3.5 font-mono text-[12px] tracking-[0.12em] uppercase text-muted hover:text-[#fdfcf7] hover:bg-teal hover:border-teal transition-all"
               >
                 {s.icon}
                 {s.label}

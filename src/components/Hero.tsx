@@ -60,30 +60,30 @@ function TerminalInner({ replayKey }: { replayKey: number }) {
   return (
     <div className="font-mono text-[12.5px] leading-[1.75]">
       <pre className="whitespace-pre-wrap break-words">
-        <span className="text-teal">{firstLine}</span>
-        {rest && <span className="text-[#c8dcee]">{rest}</span>}
-        {!done && rows === 0 && <span className="caret text-amber">▍</span>}
+        <span className="text-[#56d9c5]">{firstLine}</span>
+        {rest && <span className="text-[#cfe0d6]">{rest}</span>}
+        {!done && rows === 0 && <span className="caret text-[#f2b544]">▍</span>}
       </pre>
 
       {rows > 0 && (
-        <div className="mt-4 border border-line bg-ink-900/70">
+        <div className="mt-4 border border-deep-line bg-deep-800/70">
           {HERO_ROWS.slice(0, rows).map((r) => (
             <div
               key={r.k}
-              className={`grid grid-cols-[86px_1fr] gap-3 px-3.5 py-1.5 border-b border-line/60 last:border-b-0 ${
-                r.accent ? "bg-amber/[0.07]" : ""
+              className={`grid grid-cols-[86px_1fr] gap-3 px-3.5 py-1.5 border-b border-deep-line/60 last:border-b-0 ${
+                r.accent ? "bg-[#f2b544]/[0.08]" : ""
               }`}
             >
-              <span className="text-faint">{r.k}</span>
+              <span className="text-[#8aa096]">{r.k}</span>
               <span
                 className={
                   r.accent
-                    ? "text-amber font-semibold inline-flex items-center gap-2"
-                    : "text-paper"
+                    ? "text-[#f2b544] font-semibold inline-flex items-center gap-2"
+                    : "text-[#e9f1ea]"
                 }
               >
                 {r.accent && (
-                  <span className="w-1.5 h-1.5 rounded-full bg-amber pulse-dot" />
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#f2b544] pulse-dot" />
                 )}
                 {r.v}
               </span>
@@ -93,8 +93,8 @@ function TerminalInner({ replayKey }: { replayKey: number }) {
       )}
 
       {done && (
-        <p className="mt-3 text-faint">
-          1 row returned · 0.042s<span className="caret text-amber ml-2">▍</span>
+        <p className="mt-3 text-[#8aa096]">
+          1 row returned · 0.042s<span className="caret text-[#f2b544] ml-2">▍</span>
         </p>
       )}
     </div>
@@ -156,10 +156,15 @@ export default function Hero() {
 
           <h1 className="mt-5 font-display font-semibold leading-[0.96] tracking-[-0.015em] text-[13.5vw] sm:text-6xl md:text-7xl xl:text-[5.4rem]">
             <span className="block text-paper">{first}</span>
-            <span className="block text-transparent [-webkit-text-stroke:1.5px_#ffb224]">
+            <span className="block text-transparent [-webkit-text-stroke:1.5px_#c4830a]">
               {last}
             </span>
           </h1>
+          <Reveal delay={80}>
+            <p className="mt-3 font-cursive font-semibold text-[1.65rem] sm:text-4xl text-teal -rotate-1">
+              from systems, toward possibilities
+            </p>
+          </Reveal>
 
           <Reveal delay={150}>
             <p className="mt-6 max-w-xl text-[15px] sm:text-base leading-relaxed text-muted">
@@ -171,22 +176,22 @@ export default function Hero() {
             <div className="mt-7 flex flex-wrap items-center gap-2.5">
               <span className="inline-flex items-center gap-2 border border-line bg-ink-850/80 px-3.5 py-2 font-mono text-[11px] tracking-[0.1em] uppercase text-muted">
                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
-                  <path d="M6 11C6 11 10.5 7.2 10.5 4.5a4.5 4.5 0 1 0-9 0C1.5 7.2 6 11 6 11Z" stroke="#3ad6c3" strokeWidth="1.3" />
-                  <circle cx="6" cy="4.5" r="1.6" stroke="#3ad6c3" strokeWidth="1.3" />
+                  <path d="M6 11C6 11 10.5 7.2 10.5 4.5a4.5 4.5 0 1 0-9 0C1.5 7.2 6 11 6 11Z" stroke="#0d8a78" strokeWidth="1.3" />
+                  <circle cx="6" cy="4.5" r="1.6" stroke="#0d8a78" strokeWidth="1.3" />
                 </svg>
                 India · Hyderabad
               </span>
               <span className="inline-flex items-center gap-2 border border-line bg-ink-850/80 px-3.5 py-2 font-mono text-[11px] tracking-[0.1em] uppercase text-muted">
                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
-                  <circle cx="6" cy="6" r="4.6" stroke="#ffb224" strokeWidth="1.2" />
-                  <path d="M1.4 6h9.2M6 1.4c-2.6 2.6-2.6 6.6 0 9.2 2.6-2.6 2.6-6.6 0-9.2Z" stroke="#ffb224" strokeWidth="1.1" />
+                  <circle cx="6" cy="6" r="4.6" stroke="#c4830a" strokeWidth="1.2" />
+                  <path d="M1.4 6h9.2M6 1.4c-2.6 2.6-2.6 6.6 0 9.2 2.6-2.6 2.6-6.6 0-9.2Z" stroke="#c4830a" strokeWidth="1.1" />
                 </svg>
                 Open to relocation (India / International)
               </span>
               <span className="inline-flex items-center gap-2 border border-line bg-ink-850/80 px-3.5 py-2 font-mono text-[11px] tracking-[0.1em] uppercase text-muted">
                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
-                  <rect x="1.5" y="3.5" width="9" height="6" stroke="#ff6d5a" strokeWidth="1.2" />
-                  <path d="M4 6.5l1.4 1.4L8 5.3" stroke="#ff6d5a" strokeWidth="1.2" />
+                  <rect x="1.5" y="3.5" width="9" height="6" stroke="#d4502f" strokeWidth="1.2" />
+                  <path d="M4 6.5l1.4 1.4L8 5.3" stroke="#d4502f" strokeWidth="1.2" />
                 </svg>
                 Hybrid / Remote
               </span>
@@ -197,7 +202,7 @@ export default function Hero() {
             <div className="mt-9 flex flex-wrap items-center gap-4">
               <a
                 href="#work"
-                className="group inline-flex items-center gap-3 bg-amber text-ink-950 font-mono text-[12px] font-semibold tracking-[0.14em] uppercase px-6 py-3.5 transition-all hover:-translate-y-0.5 hover:shadow-[0_10px_30px_rgba(255,178,36,0.28)]"
+                className="group inline-flex items-center gap-3 bg-amber text-[#fdfcf7] font-mono text-[12px] font-semibold tracking-[0.14em] uppercase px-6 py-3.5 transition-all hover:-translate-y-0.5 hover:shadow-[0_12px_28px_rgba(196,131,10,0.35)]"
               >
                 Explore selected work
                 <svg width="13" height="13" viewBox="0 0 13 13" fill="none" aria-hidden="true" className="transition-transform group-hover:translate-y-0.5">
@@ -220,20 +225,20 @@ export default function Hero() {
         {/* right — query console */}
         <div className="lg:col-span-5">
           <Reveal delay={300} y={34}>
-            <div className="tick-card border border-line bg-ink-900/85 backdrop-blur-sm shadow-[0_24px_60px_rgba(3,8,15,0.55)]">
-              <div className="flex items-center justify-between px-4 h-11 border-b border-line bg-ink-850/80">
+            <div className="tick-card border border-deep-line bg-deep shadow-[0_24px_60px_rgba(23,37,31,0.35)]">
+              <div className="flex items-center justify-between px-4 h-11 border-b border-deep-line bg-deep-800">
                 <div className="flex items-center gap-1.5">
-                  <span className="w-2.5 h-2.5 rounded-full bg-coral/80" />
-                  <span className="w-2.5 h-2.5 rounded-full bg-amber/80" />
-                  <span className="w-2.5 h-2.5 rounded-full bg-teal/80" />
+                  <span className="w-2.5 h-2.5 rounded-full bg-[#ff8a70]" />
+                  <span className="w-2.5 h-2.5 rounded-full bg-[#f2b544]" />
+                  <span className="w-2.5 h-2.5 rounded-full bg-[#56d9c5]" />
                 </div>
-                <span className="font-mono text-[10.5px] text-faint tracking-[0.14em]">
+                <span className="font-mono text-[10.5px] text-[#8aa096] tracking-[0.14em]">
                   kotte@analytics — zsh
                 </span>
                 <button
                   onClick={() => setReplay((r) => r + 1)}
                   aria-label="Replay query"
-                  className="grid place-items-center w-7 h-7 border border-line text-faint hover:text-amber hover:border-amber transition-colors"
+                  className="grid place-items-center w-7 h-7 border border-deep-line text-[#8aa096] hover:text-[#f2b544] hover:border-[#f2b544] transition-colors"
                 >
                   <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
                     <path d="M10.5 6a4.5 4.5 0 1 1-1.4-3.25M10.5 1v2.5H8" stroke="currentColor" strokeWidth="1.3" />
@@ -282,7 +287,7 @@ export default function Hero() {
             >
               {t}
               <svg width="7" height="7" viewBox="0 0 7 7" aria-hidden="true">
-                <rect x="1.2" y="1.2" width="4.6" height="4.6" transform="rotate(45 3.5 3.5)" fill={i % 3 === 0 ? "#ffb224" : i % 3 === 1 ? "#3ad6c3" : "#ff6d5a"} opacity="0.75" />
+                <rect x="1.2" y="1.2" width="4.6" height="4.6" transform="rotate(45 3.5 3.5)" fill={i % 3 === 0 ? "#c4830a" : i % 3 === 1 ? "#0d8a78" : "#d4502f"} opacity="0.8" />
               </svg>
             </span>
           ))}

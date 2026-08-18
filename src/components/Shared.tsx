@@ -17,7 +17,7 @@ export const ACCENT: Record<
     border: "border-amber/45",
     bg: "bg-amber/10",
     dot: "bg-amber",
-    stroke: "#ffb224",
+    stroke: "#c4830a",
     bar: "bg-amber",
   },
   teal: {
@@ -25,7 +25,7 @@ export const ACCENT: Record<
     border: "border-teal/45",
     bg: "bg-teal/10",
     dot: "bg-teal",
-    stroke: "#3ad6c3",
+    stroke: "#0d8a78",
     bar: "bg-teal",
   },
   coral: {
@@ -33,7 +33,7 @@ export const ACCENT: Record<
     border: "border-coral/45",
     bg: "bg-coral/10",
     dot: "bg-coral",
-    stroke: "#ff6d5a",
+    stroke: "#d4502f",
     bar: "bg-coral",
   },
 };

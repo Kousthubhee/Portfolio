@@ -1,23 +1,30 @@
 @import "tailwindcss";
 
 @theme {
-  --color-ink-950: #060d17;
-  --color-ink-900: #0a1524;
-  --color-ink-850: #0d1a2c;
-  --color-ink-800: #122136;
-  --color-ink-700: #1a2f49;
-  --color-line: #1c3350;
-  --color-paper: #e9f1f8;
-  --color-muted: #9db2c6;
-  --color-faint: #5f7890;
-  --color-amber: #ffb224;
-  --color-amber-deep: #cf8f0a;
-  --color-teal: #3ad6c3;
-  --color-coral: #ff6d5a;
+  /* soft sage daylight surfaces (ink-* are now light, layered) */
+  --color-ink-950: #edf0e7;
+  --color-ink-900: #f8f9f4;
+  --color-ink-850: #e2e7d9;
+  --color-ink-800: #d7dec9;
+  --color-ink-700: #c3cdb4;
+  --color-line: #d3dac7;
+  --color-paper: #1e2d27;
+  --color-muted: #4c5f56;
+  --color-faint: #7d8f84;
+  --color-amber: #c4830a;
+  --color-amber-deep: #8f5e02;
+  --color-teal: #0d8a78;
+  --color-coral: #d4502f;
+
+  /* deep pine — dark surfaces (terminal, code window) */
+  --color-deep: #17251f;
+  --color-deep-800: #1e322a;
+  --color-deep-line: #2e4a3e;
 
   --font-display: "Clash Display", "IBM Plex Sans", system-ui, sans-serif;
   --font-sans: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  --font-cursive: "Dancing Script", "Segoe Script", cursive;
 }
 
 html {
@@ -34,7 +41,7 @@ body {
 
 ::selection {
   background: var(--color-amber);
-  color: var(--color-ink-950);
+  color: #fdfcf7;
 }
 
 ::-webkit-scrollbar {
@@ -106,10 +113,10 @@ body {
 .bg-grid-faint {
   background-image: linear-gradient(
       to right,
-      rgba(122, 160, 196, 0.05) 1px,
+      rgba(30, 61, 49, 0.055) 1px,
       transparent 1px
     ),
-    linear-gradient(to bottom, rgba(122, 160, 196, 0.05) 1px, transparent 1px);
+    linear-gradient(to bottom, rgba(30, 61, 49, 0.055) 1px, transparent 1px);
   background-size: 44px 44px;
   mask-image: radial-gradient(
     ellipse 90% 70% at 50% 30%,

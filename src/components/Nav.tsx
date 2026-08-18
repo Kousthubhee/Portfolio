@@ -61,7 +61,7 @@ export default function Nav() {
           </span>
           <a
             href={`mailto:${PROFILE.email}`}
-            className="hidden sm:inline-flex items-center gap-2 bg-amber text-ink-950 font-mono text-[11.5px] font-semibold tracking-[0.12em] uppercase px-4 py-2 transition-all hover:bg-paper hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(255,178,36,0.25)]"
+            className="hidden sm:inline-flex items-center gap-2 bg-amber text-[#fdfcf7] font-mono text-[11.5px] font-semibold tracking-[0.12em] uppercase px-4 py-2 transition-all hover:bg-teal hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(196,131,10,0.3)]"
           >
             Hire me
             <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
@@ -105,7 +105,7 @@ export default function Nav() {
           ))}
           <a
             href={`mailto:${PROFILE.email}`}
-            className="mt-3 inline-flex justify-center bg-amber text-ink-950 font-mono text-xs font-semibold tracking-[0.14em] uppercase px-4 py-2.5"
+            className="mt-3 inline-flex justify-center bg-amber text-[#fdfcf7] font-mono text-xs font-semibold tracking-[0.14em] uppercase px-4 py-2.5"
           >
             Hire me
           </a>

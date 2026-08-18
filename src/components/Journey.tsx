@@ -17,7 +17,7 @@ export default function Journey() {
               India <span className="text-teal">→</span> France{" "}
               <span className="text-teal">→</span> India{" "}
               <span className="text-teal">→</span>{" "}
-              <span className="text-transparent [-webkit-text-stroke:1.3px_#3ad6c3]">next?</span>
+              <span className="font-cursive font-semibold text-[1.2em] text-teal">next?</span>
             </>
           }
           note="A career rarely moves in a straight line. Mine moved across continents — systems first, then data, then the decisions behind the data."
@@ -30,7 +30,7 @@ export default function Journey() {
           <div
             className={`journey-fill absolute left-[6.5px] md:left-1/2 md:-translate-x-1/2 top-2 bottom-2 w-[2px] ${inView ? "in" : ""}`}
             style={{
-              background: "linear-gradient(to bottom, #3ad6c3, #ffb224 60%, #ff6d5a)",
+              background: "linear-gradient(to bottom, #0d8a78, #c4830a 60%, #d4502f)",
             }}
           />
 

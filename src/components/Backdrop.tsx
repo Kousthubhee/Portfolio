@@ -15,7 +15,7 @@ export default function Backdrop() {
 
     let raf = 0;
     let particles: P[] = [];
-    const colors = ["rgba(58,214,195,", "rgba(255,178,36,", "rgba(157,178,198,"];
+    const colors = ["rgba(13,138,120,", "rgba(196,131,10,", "rgba(76,101,90,"];
 
     const resize = () => {
       const dpr = Math.min(window.devicePixelRatio || 1, 2);
@@ -49,7 +49,7 @@ export default function Backdrop() {
         if (p.y > window.innerHeight + 20) p.y = -20;
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-        ctx.fillStyle = `${p.c}0.55)`;
+        ctx.fillStyle = `${p.c}0.42)`;
         ctx.fill();
       }
       for (let i = 0; i < particles.length; i++) {
@@ -60,7 +60,7 @@ export default function Backdrop() {
           const dy = a.y - b.y;
           const d2 = dx * dx + dy * dy;
           if (d2 < 120 * 120) {
-            const alpha = (1 - Math.sqrt(d2) / 120) * 0.12;
+            const alpha = (1 - Math.sqrt(d2) / 120) * 0.1;
             ctx.beginPath();
             ctx.moveTo(a.x, a.y);
             ctx.lineTo(b.x, b.y);
@@ -99,12 +99,12 @@ export default function Backdrop() {
 
   return (
     <div className="fixed inset-0 z-0 pointer-events-none" aria-hidden="true">
-      {/* deep base wash */}
+      {/* soft daylight wash */}
       <div
         className="absolute inset-0"
         style={{
           background:
-            "radial-gradient(ellipse 120% 80% at 50% -10%, #0e2135 0%, #060d17 55%)",
+            "radial-gradient(ellipse 120% 80% at 50% -10%, #fbfcf7 0%, #edf0e7 58%)",
         }}
       />
       {/* ambient glows */}
@@ -112,14 +112,14 @@ export default function Backdrop() {
         className="absolute -top-40 right-[-15%] w-[42rem] h-[42rem] rounded-full"
         style={{
           background:
-            "radial-gradient(circle, rgba(58,214,195,0.09) 0%, transparent 65%)",
+            "radial-gradient(circle, rgba(13,138,120,0.10) 0%, transparent 65%)",
         }}
       />
       <div
         className="absolute top-[55%] left-[-18%] w-[46rem] h-[46rem] rounded-full"
         style={{
           background:
-            "radial-gradient(circle, rgba(255,178,36,0.07) 0%, transparent 65%)",
+            "radial-gradient(circle, rgba(196,131,10,0.10) 0%, transparent 65%)",
         }}
       />
       <div className="absolute inset-0 bg-grid-faint" />

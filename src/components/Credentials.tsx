@@ -97,7 +97,7 @@ export default function Credentials() {
           {/* languages */}
           <div className="lg:col-span-3">
             <Reveal delay={120} y={24}>
-              <div ref={langRef} className="tick-card border border-line bg-ink-900/60 px-6 py-6" style={{ "--tick": "#ff6d5a" } as CSSProperties}>
+              <div ref={langRef} className="tick-card border border-line bg-ink-900/60 px-6 py-6" style={{ "--tick": "#d4502f" } as CSSProperties}>
                 <p className="font-mono text-[10.5px] tracking-[0.2em] uppercase text-coral">
                   Languages
                 </p>

@@ -14,7 +14,7 @@ export default function Skills() {
             <>
               A toolkit built to be
               <br />
-              <span className="text-transparent [-webkit-text-stroke:1.3px_#ffb224]">recombined</span>
+              <span className="font-cursive font-semibold text-[1.18em] text-amber">recombined</span>
             </>
           }
           note="Tools change; the ability to learn the next one doesn't. These are the instruments I currently reach for — each one earned on real problems."

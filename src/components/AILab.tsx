@@ -93,7 +93,7 @@ export default function AILab() {
         <div className="relative">
           <div className="hidden lg:block absolute top-[7px] inset-x-8 h-px bg-line" aria-hidden="true">
             <svg className="w-full h-[2px] -mt-[0.5px]" preserveAspectRatio="none" viewBox="0 0 100 2" aria-hidden="true">
-              <line x1="0" y1="1" x2="100" y2="1" stroke="#3ad6c3" strokeWidth="1.4" className="anim-dash" />
+              <line x1="0" y1="1" x2="100" y2="1" stroke="#0d8a78" strokeWidth="1.4" className="anim-dash" />
             </svg>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4 lg:gap-3 lg:pt-9">
@@ -134,9 +134,9 @@ export default function AILab() {
 
         {/* also in rotation — kept deliberately low-key */}
         <Reveal delay={160}>
-          <div className="mt-4 flex flex-wrap items-center gap-2 border border-dashed border-line bg-ink-950/40 px-4 py-3.5">
-            <span className="mr-1 font-mono text-[10px] tracking-[0.22em] uppercase text-faint">
-              also in rotation —
+          <div className="mt-4 flex flex-wrap items-center gap-2 border border-dashed border-line bg-ink-850/40 px-4 py-3.5">
+            <span className="mr-1 font-cursive font-semibold text-xl text-teal -rotate-1">
+              also in rotation…
             </span>
             {AI_ALSO.map((n) => (
               <span
@@ -151,7 +151,7 @@ export default function AILab() {
 
         {/* experiments strip */}
         <Reveal delay={120}>
-          <div className="mt-10 tick-card border border-line bg-ink-850/70 px-6 sm:px-8 py-6 grid sm:grid-cols-3 gap-6" style={{ "--tick": "#3ad6c3" } as CSSProperties}>
+          <div className="mt-10 tick-card border border-line bg-ink-850/70 px-6 sm:px-8 py-6 grid sm:grid-cols-3 gap-6" style={{ "--tick": "#0d8a78" } as CSSProperties}>
             {[
               {
                 t: "Knowledge-base chatbot",

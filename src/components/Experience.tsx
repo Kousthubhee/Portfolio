@@ -61,7 +61,7 @@ export default function Experience() {
               const a = ACCENT[e.accent as "amber" | "teal" | "coral"];
               return (
                 <Reveal key={e.role} delay={i * 80} y={34}>
-                  <article className="group tick-card border border-line bg-ink-900/65 px-6 sm:px-8 py-7 transition-all duration-300 hover:-translate-y-1 hover:bg-ink-850/90 hover:shadow-[0_18px_50px_rgba(3,8,15,0.5)]" style={{ "--tick": a.stroke } as CSSProperties}>
+                  <article className="group tick-card border border-line bg-ink-900/65 px-6 sm:px-8 py-7 transition-all duration-300 hover:-translate-y-1 hover:bg-ink-850/90 hover:shadow-[0_18px_44px_rgba(23,49,44,0.16)]" style={{ "--tick": a.stroke } as CSSProperties}>
                     <div className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-2">
                       <div>
                         <h3 className="font-display font-semibold text-xl sm:text-[1.35rem] text-paper leading-snug">

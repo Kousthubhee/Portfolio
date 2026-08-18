@@ -14,7 +14,7 @@ export default function Chapters() {
             <>
               Between systems
               <br />
-              and <span className="text-transparent [-webkit-text-stroke:1.3px_#ffb224]">possibilities</span>
+              and <span className="font-cursive font-semibold text-[1.18em] text-amber">possibilities</span>
             </>
           }
           note="The full story is one of decisions, experiments, failures and moments of trying something slightly beyond my current capabilities."
@@ -26,6 +26,9 @@ export default function Chapters() {
           is the gradual realization that I don't want to simply{" "}
           <span className="text-paper">maintain systems</span>. I want to
           understand them, improve them, and use data to make better decisions.
+        </p>
+        <p className="max-w-2xl -mt-6 mb-12 text-right font-cursive font-semibold text-2xl text-coral rotate-[-1.5deg]">
+          — still being written, Kousthubhee
         </p>
 
         {/* stacked sticky cards */}
@@ -39,7 +42,7 @@ export default function Chapters() {
                 style={{ top: `${92 + i * 15}px`, zIndex: i + 1 }}
               >
                 <article
-                  className="tick-card border border-line bg-ink-850 px-6 sm:px-10 py-7 sm:py-9 shadow-[0_-18px_44px_rgba(3,8,15,0.66)]"
+                  className="tick-card border border-line bg-ink-850 px-6 sm:px-10 py-7 sm:py-9 shadow-[0_-16px_40px_rgba(23,49,44,0.14)]"
                   style={{ "--tick": a.stroke, marginBottom: i < CHAPTERS.length - 1 ? "2.25rem" : 0 } as CSSProperties}
                 >
                   <div className="grid md:grid-cols-[150px_1fr] gap-5 md:gap-10 items-start">

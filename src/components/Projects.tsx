@@ -41,7 +41,7 @@ function FeaturedProject({ p, flip }: { p: Project; flip: boolean }) {
     <Reveal y={40}>
       <article
         ref={ref}
-        className="group tick-card border border-line bg-ink-900/65 transition-all duration-300 hover:-translate-y-1.5 hover:bg-ink-850/85 hover:shadow-[0_22px_60px_rgba(3,8,15,0.55)]"
+        className="group tick-card border border-line bg-ink-900/65 transition-all duration-300 hover:-translate-y-1.5 hover:bg-ink-900 hover:shadow-[0_22px_50px_rgba(23,49,44,0.18)]"
         style={{ "--tick": a.stroke } as CSSProperties}
       >
         <div className={`grid md:grid-cols-12 ${flip ? "" : ""}`}>
