@@ -10,7 +10,7 @@ export const PROFILE = {
   github: "https://github.com/Kousthubhee/Projects",
   location: "India",
   summary:
-    "From enterprise systems to business analytics — I turn messy data into decisions. M.Sc. Business Analytics (France), two years in enterprise tech (Infosys), and hands-on with SQL, Python, Power BI, Tableau and AI-assisted workflows. Currently exploring automation with n8n, Claude API and Ollama.",
+    "From enterprise systems to business analytics — I turn messy data into decisions. M.Sc. Business Analytics (France), two years in enterprise tech (Infosys), and hands-on with SQL, Python, Power BI, Tableau and AI-assisted workflows. Currently exploring automation with n8n, Claude and other LLM APIs — plus coding agents like Qwen Code CLI and Opencode.",
 };
 
 export const NAV_LINKS = [
@@ -58,7 +58,7 @@ export const TICKER = [
   "Looker Studio",
   "Generative AI",
   "n8n Automation",
-  "Ollama",
+  "Qwen Code CLI",
   "Machine Learning",
   "ETL / ELT",
   "A/B Testing",
@@ -72,7 +72,7 @@ export const MILESTONES = [
     title: "Looking for the right team",
     org: "Data · BI · Analytics",
     place: "India / Hybrid / Remote / International",
-    text: "Seeking a Data, BI, Product or Analytics Engineering role — while continuing to explore AI-assisted workflows with n8n, Claude API and Ollama.",
+    text: "Seeking a Data, BI, Product or Analytics Engineering role — while continuing to explore AI-assisted workflows with n8n, Claude and other LLM APIs.",
     accent: "amber",
     current: true,
   },
@@ -152,7 +152,7 @@ export const CHAPTERS = [
     title: "Learning by building",
     quote: "A dataset becomes a pipeline becomes a decision",
     accent: "coral",
-    body: "I rarely want to learn anything purely in theory — if a technology interests me, I want to build something with it. So a dataset became a pipeline, a pipeline became a model, a model fed a dashboard, and the dashboard became a decision-making tool. Increasingly, AI sits across that whole chain, quietly automating the repetitive parts — which is exactly what I'm exploring right now with n8n, Claude API and Ollama. Underneath all of it is one constant: curiosity. Technology simply gives that curiosity somewhere to go.",
+    body: "I rarely want to learn anything purely in theory — if a technology interests me, I want to build something with it. So a dataset became a pipeline, a pipeline became a model, a model fed a dashboard, and the dashboard became a decision-making tool. Increasingly, AI sits across that whole chain, quietly automating the repetitive parts — which is exactly what I'm exploring right now with n8n, Claude and other LLM APIs. Underneath all of it is one constant: curiosity. Technology simply gives that curiosity somewhere to go.",
   },
   {
     numeral: "IV",
@@ -326,10 +326,10 @@ export const PROJECTS: Project[] = [
     objective:
       "Not a production system — a running set of experiments asking how far AI can take the repetitive parts of analytics: extraction, summarization, drafting, chatbots and small tools.",
     points: [
-      "Chained LLM calls, data and triggers into repeatable flows with n8n and Claude; ran local models through Ollama and LM Studio for private extraction and summarization.",
-      "Prototyped interfaces and tools via vibe-coding with Lovable and Bolt, and explored coding agents like Qwen Code and Opencode along the way.",
+      "Chained LLM calls, data and triggers into repeatable flows with n8n and Claude; ran local models through LM Studio for private extraction and summarization.",
+      "Prototyped interfaces and tools via vibe-coding with Lovable and Bolt, and explored coding agents like Qwen Code CLI and Opencode along the way.",
     ],
-    tags: ["n8n", "Claude", "Ollama", "LM Studio", "Lovable", "Bolt", "Qwen Code"],
+    tags: ["n8n", "Claude", "LM Studio", "Qwen Code CLI", "Opencode", "Lovable", "Bolt"],
     accent: "coral",
     metrics: [
       { v: "6+", l: "tools in rotation" },
@@ -341,16 +341,15 @@ export const PROJECTS: Project[] = [
 
 export const AI_TOOLS = [
   { name: "ChatGPT", mark: "gpt" },
-  { name: "Claude & Claude API", mark: "claude" },
+  { name: "Claude & other LLM APIs", mark: "claude" },
   { name: "n8n", mark: "n8n" },
-  { name: "Ollama", mark: "ollama" },
-  { name: "LLM APIs", mark: "api" },
   { name: "Supabase", mark: "db" },
 ];
 
 export const AI_ALSO = [
   "LM Studio",
-  "Qwen Code",
+  "Ollama",
+  "Qwen Code CLI",
   "Opencode",
   "Lovable",
   "Bolt",
@@ -380,7 +379,7 @@ export const PIPELINE = [
     step: "04",
     name: "Generate",
     desc: "An LLM drafts the summary, insight or next-step note.",
-    tool: "Claude API · Ollama",
+    tool: "Claude · other LLM APIs",
   },
   {
     step: "05",
@@ -415,7 +414,7 @@ export const SKILL_AREAS = [
   },
   {
     name: "AI & Automation",
-    note: "Generative AI · prompt engineering · n8n · Ollama workflows",
+    note: "Generative AI · prompt engineering · n8n workflows · coding agents (Qwen Code CLI, Opencode)",
   },
 ];
 
@@ -437,7 +436,7 @@ export const TOOLKIT = [
   },
   {
     group: "AI & Automation",
-    items: ["Generative AI", "Prompt Engineering", "n8n", "Ollama", "AI Workflows"],
+    items: ["Generative AI", "Prompt Engineering", "n8n", "LLM APIs", "AI Workflows"],
   },
   { group: "Development", items: ["Git", "GitHub", "HTML", "CSS"] },
 ];

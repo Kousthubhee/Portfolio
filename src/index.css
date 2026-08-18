@@ -70,6 +70,7 @@ body {
 .tick-card {
   position: relative;
   --tick: var(--color-amber);
+  border-radius: 14px;
 }
 .tick-card::before,
 .tick-card::after {

@@ -26,7 +26,7 @@ export default function Experience() {
               how data explains them, and how people decide with both.
             </p>
 
-            <div className="mt-7 border border-line bg-ink-900/60 divide-y divide-line">
+            <div className="mt-7 rounded-xl border border-line bg-ink-900/60 divide-y divide-line overflow-hidden">
               {[
                 { k: "Data & product lead", v: "5 months · NEOMA Venture Studio" },
                 { k: "Data operations & BI", v: "2 years · Infosys" },
@@ -90,7 +90,7 @@ export default function Experience() {
                       {e.stack.map((s) => (
                         <span
                           key={s}
-                          className="font-mono text-[10.5px] tracking-[0.06em] px-2.5 py-1 border border-line text-muted bg-ink-950/40 transition-colors group-hover:border-current group-hover:text-paper"
+                          className="rounded-md font-mono text-[10.5px] tracking-[0.06em] px-2.5 py-1 border border-line text-muted bg-ink-950/40 transition-colors group-hover:border-current group-hover:text-paper"
                           style={{ color: undefined }}
                         >
                           {s}

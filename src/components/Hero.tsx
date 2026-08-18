@@ -119,7 +119,7 @@ function KpiCell({
 }) {
   const v = useCountUp(value, start, { decimals: decimals ?? 0, duration: 1400 + delay });
   return (
-    <div className="group px-5 py-6 sm:py-7 bg-ink-900 hover:bg-ink-850 transition-colors">
+    <div className="group rounded-xl border border-line bg-ink-900/70 hover:bg-ink-900 hover:-translate-y-0.5 transition-all px-5 py-6 sm:py-7">
       <p className="font-display font-semibold text-3xl sm:text-4xl text-paper tabular-nums">
         {decimals ? v.toFixed(decimals) : Math.round(v)}
         <span className="text-amber">{suffix}</span>
@@ -174,21 +174,21 @@ export default function Hero() {
 
           <Reveal delay={260}>
             <div className="mt-7 flex flex-wrap items-center gap-2.5">
-              <span className="inline-flex items-center gap-2 border border-line bg-ink-850/80 px-3.5 py-2 font-mono text-[11px] tracking-[0.1em] uppercase text-muted">
+              <span className="inline-flex items-center gap-2 rounded-md border border-line bg-ink-850/80 px-3.5 py-2 font-mono text-[11px] tracking-[0.1em] uppercase text-muted">
                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
                   <path d="M6 11C6 11 10.5 7.2 10.5 4.5a4.5 4.5 0 1 0-9 0C1.5 7.2 6 11 6 11Z" stroke="#0d8a78" strokeWidth="1.3" />
                   <circle cx="6" cy="4.5" r="1.6" stroke="#0d8a78" strokeWidth="1.3" />
                 </svg>
                 India · Hyderabad
               </span>
-              <span className="inline-flex items-center gap-2 border border-line bg-ink-850/80 px-3.5 py-2 font-mono text-[11px] tracking-[0.1em] uppercase text-muted">
+              <span className="inline-flex items-center gap-2 rounded-md border border-line bg-ink-850/80 px-3.5 py-2 font-mono text-[11px] tracking-[0.1em] uppercase text-muted">
                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
                   <circle cx="6" cy="6" r="4.6" stroke="#c4830a" strokeWidth="1.2" />
                   <path d="M1.4 6h9.2M6 1.4c-2.6 2.6-2.6 6.6 0 9.2 2.6-2.6 2.6-6.6 0-9.2Z" stroke="#c4830a" strokeWidth="1.1" />
                 </svg>
                 Open to relocation (India / International)
               </span>
-              <span className="inline-flex items-center gap-2 border border-line bg-ink-850/80 px-3.5 py-2 font-mono text-[11px] tracking-[0.1em] uppercase text-muted">
+              <span className="inline-flex items-center gap-2 rounded-md border border-line bg-ink-850/80 px-3.5 py-2 font-mono text-[11px] tracking-[0.1em] uppercase text-muted">
                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
                   <rect x="1.5" y="3.5" width="9" height="6" stroke="#d4502f" strokeWidth="1.2" />
                   <path d="M4 6.5l1.4 1.4L8 5.3" stroke="#d4502f" strokeWidth="1.2" />
@@ -202,7 +202,7 @@ export default function Hero() {
             <div className="mt-9 flex flex-wrap items-center gap-4">
               <a
                 href="#work"
-                className="group inline-flex items-center gap-3 bg-amber text-[#fdfcf7] font-mono text-[12px] font-semibold tracking-[0.14em] uppercase px-6 py-3.5 transition-all hover:-translate-y-0.5 hover:shadow-[0_12px_28px_rgba(196,131,10,0.35)]"
+                className="group inline-flex items-center gap-3 rounded-lg bg-amber text-[#fdfcf7] font-mono text-[12px] font-semibold tracking-[0.14em] uppercase px-6 py-3.5 transition-all hover:-translate-y-0.5 hover:shadow-[0_12px_28px_rgba(196,131,10,0.35)]"
               >
                 Explore selected work
                 <svg width="13" height="13" viewBox="0 0 13 13" fill="none" aria-hidden="true" className="transition-transform group-hover:translate-y-0.5">
@@ -211,7 +211,7 @@ export default function Hero() {
               </a>
               <a
                 href="#story"
-                className="group inline-flex items-center gap-3 border border-line px-6 py-3.5 font-mono text-[12px] tracking-[0.14em] uppercase text-muted hover:text-paper hover:border-teal transition-all"
+                className="group inline-flex items-center gap-3 rounded-lg border border-line px-6 py-3.5 font-mono text-[12px] tracking-[0.14em] uppercase text-muted hover:text-paper hover:border-teal transition-all"
               >
                 Read my story
                 <svg width="13" height="13" viewBox="0 0 13 13" fill="none" aria-hidden="true" className="transition-transform group-hover:translate-x-1">
@@ -226,7 +226,7 @@ export default function Hero() {
         <div className="lg:col-span-5">
           <Reveal delay={300} y={34}>
             <div className="tick-card border border-deep-line bg-deep shadow-[0_24px_60px_rgba(23,37,31,0.35)]">
-              <div className="flex items-center justify-between px-4 h-11 border-b border-deep-line bg-deep-800">
+              <div className="flex items-center justify-between px-4 h-11 rounded-t-[13px] border-b border-deep-line bg-deep-800">
                 <div className="flex items-center gap-1.5">
                   <span className="w-2.5 h-2.5 rounded-full bg-[#ff8a70]" />
                   <span className="w-2.5 h-2.5 rounded-full bg-[#f2b544]" />
@@ -238,7 +238,7 @@ export default function Hero() {
                 <button
                   onClick={() => setReplay((r) => r + 1)}
                   aria-label="Replay query"
-                  className="grid place-items-center w-7 h-7 border border-deep-line text-[#8aa096] hover:text-[#f2b544] hover:border-[#f2b544] transition-colors"
+                  className="grid place-items-center w-7 h-7 rounded-full border border-deep-line text-[#8aa096] hover:text-[#f2b544] hover:border-[#f2b544] transition-colors"
                 >
                   <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
                     <path d="M10.5 6a4.5 4.5 0 1 1-1.4-3.25M10.5 1v2.5H8" stroke="currentColor" strokeWidth="1.3" />
@@ -252,14 +252,15 @@ export default function Hero() {
           </Reveal>
 
           <Reveal delay={480}>
-            <div className="floaty mt-5 border border-line bg-ink-850/80 px-4 py-3.5 flex items-start gap-3">
+            <div className="floaty mt-5 rounded-lg border border-line bg-ink-850/80 px-4 py-3.5 flex items-start gap-3">
               <span className="mt-0.5 w-2 h-2 bg-teal shrink-0" />
               <p className="font-mono text-[11.5px] leading-relaxed text-muted">
                 <span className="text-teal">currently:</span> exploring AI
                 workflows with <span className="text-paper">n8n</span>,{" "}
-                <span className="text-paper">Claude API</span> &{" "}
-                <span className="text-paper">Ollama</span> — automating the
-                repetitive parts of analytics.
+                <span className="text-paper">Claude & other LLM APIs</span> —
+                and prototyping with{" "}
+                <span className="text-paper">Qwen Code CLI</span> &{" "}
+                <span className="text-paper">Opencode</span>.
               </p>
             </div>
           </Reveal>
@@ -267,9 +268,9 @@ export default function Hero() {
       </div>
 
       {/* KPI strip */}
-      <div className="mt-16 lg:mt-20 border-y border-line bg-ink-900/40">
+      <div className="mt-16 lg:mt-20">
         <div ref={kpiRef} className="wrap">
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-px bg-line">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
             {KPIS.map((k, i) => (
               <KpiCell key={k.label} {...k} start={kpiInView} delay={i * 90} />
             ))}

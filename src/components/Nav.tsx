@@ -25,7 +25,7 @@ export default function Nav() {
       <div className="wrap h-16 flex items-center justify-between gap-4">
         {/* brand */}
         <a href="#top" className="flex items-center gap-3 group" aria-label="Back to top">
-          <span className="relative grid place-items-center w-9 h-9 border border-line bg-ink-850 font-display font-semibold text-amber text-lg transition-colors group-hover:border-amber">
+          <span className="relative grid place-items-center w-9 h-9 rounded-lg border border-line bg-ink-850 font-display font-semibold text-amber text-lg transition-colors group-hover:border-amber">
             K<sup className="text-[10px] -translate-y-1.5 text-teal">3</sup>
             <span className="absolute -bottom-px -right-px w-1.5 h-1.5 bg-amber" />
           </span>
@@ -55,13 +55,13 @@ export default function Nav() {
         </nav>
 
         <div className="flex items-center gap-3">
-          <span className="hidden md:inline-flex items-center gap-2 border border-amber/40 bg-amber/10 text-amber font-mono text-[10.5px] tracking-[0.16em] uppercase px-3 py-1.5">
+          <span className="hidden md:inline-flex items-center gap-2 rounded-full border border-amber/40 bg-amber/10 text-amber font-mono text-[10.5px] tracking-[0.16em] uppercase px-3 py-1.5">
             <span className="w-1.5 h-1.5 rounded-full bg-amber pulse-dot" />
             Open to work
           </span>
           <a
             href={`mailto:${PROFILE.email}`}
-            className="hidden sm:inline-flex items-center gap-2 bg-amber text-[#fdfcf7] font-mono text-[11.5px] font-semibold tracking-[0.12em] uppercase px-4 py-2 transition-all hover:bg-teal hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(196,131,10,0.3)]"
+            className="hidden sm:inline-flex items-center gap-2 rounded-lg bg-amber text-[#fdfcf7] font-mono text-[11.5px] font-semibold tracking-[0.12em] uppercase px-4 py-2 transition-all hover:bg-teal hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(196,131,10,0.3)]"
           >
             Hire me
             <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
@@ -72,7 +72,7 @@ export default function Nav() {
           <button
             onClick={() => setOpen(!open)}
             aria-label="Toggle menu"
-            className="lg:hidden grid place-items-center w-9 h-9 border border-line text-paper hover:border-amber transition-colors"
+            className="lg:hidden grid place-items-center w-9 h-9 rounded-lg border border-line text-paper hover:border-amber transition-colors"
           >
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
               {open ? (
@@ -105,7 +105,7 @@ export default function Nav() {
           ))}
           <a
             href={`mailto:${PROFILE.email}`}
-            className="mt-3 inline-flex justify-center bg-amber text-[#fdfcf7] font-mono text-xs font-semibold tracking-[0.14em] uppercase px-4 py-2.5"
+            className="mt-3 inline-flex justify-center rounded-lg bg-amber text-[#fdfcf7] font-mono text-xs font-semibold tracking-[0.14em] uppercase px-4 py-2.5"
           >
             Hire me
           </a>

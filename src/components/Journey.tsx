@@ -65,7 +65,7 @@ export default function Journey() {
                             {m.period}
                           </span>
                           <span
-                            className={`font-mono text-[9.5px] tracking-[0.2em] uppercase px-2 py-0.5 border ${a.border} ${a.text} ${a.bg}`}
+                            className={`rounded-md font-mono text-[9.5px] tracking-[0.2em] uppercase px-2 py-0.5 border ${a.border} ${a.text} ${a.bg}`}
                           >
                             {m.tag}
                           </span>

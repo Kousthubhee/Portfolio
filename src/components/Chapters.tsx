@@ -62,7 +62,7 @@ export default function Chapters() {
                           {c.title}
                         </h3>
                         <span
-                          className={`font-mono text-[10.5px] px-2.5 py-1 border ${a.border} ${a.text} ${a.bg} tracking-[0.06em]`}
+                          className={`rounded-md font-mono text-[10.5px] px-2.5 py-1 border ${a.border} ${a.text} ${a.bg} tracking-[0.06em]`}
                         >
                           “{c.quote}”
                         </span>

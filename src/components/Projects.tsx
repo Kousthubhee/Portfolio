@@ -82,8 +82,7 @@ function FeaturedProject({ p, flip }: { p: Project; flip: boolean }) {
               {p.tags.map((t) => (
                 <span
                   key={t}
-                  className={`font-mono text-[10.5px] px-2.5 py-1 border ${a.border} ${a.text} ${a.bg}`}
-                >
+                          className={`rounded-md font-mono text-[10.5px] px-2.5 py-1 border ${a.border} ${a.text} ${a.bg}`}                >
                   {t}
                 </span>
               ))}
@@ -177,8 +176,7 @@ export default function Projects() {
                   </ul>
                   <div className="mt-5 flex flex-wrap gap-2">
                     {p.tags.map((t) => (
-                      <span key={t} className="font-mono text-[10px] px-2 py-0.5 border border-line text-muted">
-                        {t}
+                        <span key={t} className="rounded-md font-mono text-[10px] px-2 py-0.5 border border-line text-muted">                        {t}
                       </span>
                     ))}
                   </div>

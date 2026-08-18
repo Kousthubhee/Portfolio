@@ -31,7 +31,7 @@ export default function Skills() {
             <div className="space-y-3">
               {SKILL_AREAS.map((s, i) => (
                 <Reveal key={s.name} delay={i * 70} y={18}>
-                  <div className="group flex items-start gap-4 border border-line bg-ink-900/60 px-5 py-4 transition-all duration-300 hover:-translate-y-0.5 hover:border-amber/50 hover:bg-ink-850">
+                  <div className="group flex items-start gap-4 rounded-xl border border-line bg-ink-900/60 px-5 py-4 transition-all duration-300 hover:-translate-y-0.5 hover:border-amber/50 hover:bg-ink-850">
                     <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true" className="mt-1 shrink-0 text-amber transition-transform duration-300 group-hover:rotate-90">
                       <path d="M9 1.5 10.8 7.2 16.5 9l-5.7 1.8L9 16.5 7.2 10.8 1.5 9l5.7-1.8L9 1.5Z" stroke="currentColor" strokeWidth="1.3" strokeLinejoin="round" />
                     </svg>
@@ -65,7 +65,7 @@ export default function Skills() {
             <div className="grid sm:grid-cols-2 gap-4">
               {TOOLKIT.map((g, i) => (
                 <Reveal key={g.group} delay={i * 60} y={22}>
-                  <div className="group h-full border border-line bg-ink-900/60 px-5 py-5 transition-all duration-300 hover:-translate-y-1 hover:border-amber/50 hover:bg-ink-850">
+                  <div className="group h-full rounded-xl border border-line bg-ink-900/60 px-5 py-5 transition-all duration-300 hover:-translate-y-1 hover:border-amber/50 hover:bg-ink-850">
                     <div className="flex items-center justify-between">
                       <h3 className="font-mono text-[11px] tracking-[0.18em] uppercase text-amber">
                         {g.group}
@@ -78,7 +78,7 @@ export default function Skills() {
                       {g.items.map((it) => (
                         <span
                           key={it}
-                          className="font-mono text-[11px] px-2 py-[3px] border border-line/80 text-muted transition-colors hover:text-paper hover:border-muted"
+                          className="rounded-md font-mono text-[11px] px-2 py-[3px] border border-line/80 text-muted transition-colors hover:text-paper hover:border-muted"
                         >
                           {it}
                         </span>

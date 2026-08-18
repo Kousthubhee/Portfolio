@@ -36,15 +36,15 @@ export default function Contact() {
             {TARGET_ROLES.map((r) => (
               <span
                 key={r}
-                className="font-mono text-[11px] tracking-[0.1em] px-3 py-1.5 border border-line bg-ink-900/60 text-muted hover:text-amber hover:border-amber/50 transition-colors"
+                className="rounded-md font-mono text-[11px] tracking-[0.1em] px-3 py-1.5 border border-line bg-ink-900/60 text-muted hover:text-amber hover:border-amber/50 transition-colors"
               >
                 {r}
               </span>
             ))}
-            <span className="font-mono text-[11px] tracking-[0.1em] px-3 py-1.5 border border-amber/40 bg-amber/10 text-amber">
+            <span className="rounded-md font-mono text-[11px] tracking-[0.1em] px-3 py-1.5 border border-amber/40 bg-amber/10 text-amber">
               Open to relocation (India / International)
             </span>
-            <span className="font-mono text-[11px] tracking-[0.1em] px-3 py-1.5 border border-teal/40 bg-teal/10 text-teal">
+            <span className="rounded-md font-mono text-[11px] tracking-[0.1em] px-3 py-1.5 border border-teal/40 bg-teal/10 text-teal">
               Hybrid / Remote
             </span>
           </div>
@@ -66,7 +66,7 @@ export default function Contact() {
           <div className="mt-9 flex flex-wrap gap-4">
             <a
               href={`mailto:${PROFILE.email}?subject=Opportunity%20for%20Kousthubhee`}
-              className="group inline-flex items-center gap-3 bg-amber text-[#fdfcf7] font-mono text-[12px] font-semibold tracking-[0.14em] uppercase px-6 py-3.5 transition-all hover:-translate-y-0.5 hover:shadow-[0_12px_28px_rgba(196,131,10,0.35)]"
+              className="group inline-flex items-center gap-3 rounded-lg bg-amber text-[#fdfcf7] font-mono text-[12px] font-semibold tracking-[0.14em] uppercase px-6 py-3.5 transition-all hover:-translate-y-0.5 hover:shadow-[0_12px_28px_rgba(196,131,10,0.35)]"
             >
               <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
                 <rect x="1.5" y="3" width="11" height="8" stroke="currentColor" strokeWidth="1.4" />
@@ -78,7 +78,7 @@ export default function Contact() {
               href={PROFILE.whatsapp}
               target="_blank"
               rel="noreferrer"
-              className="group inline-flex items-center gap-3 bg-[#25D366] text-[#fdfcf7] font-mono text-[12px] font-semibold tracking-[0.14em] uppercase px-6 py-3.5 transition-all hover:-translate-y-0.5 hover:shadow-[0_12px_28px_rgba(37,211,102,0.4)]"
+              className="group inline-flex items-center gap-3 rounded-lg bg-[#25D366] text-[#fdfcf7] font-mono text-[12px] font-semibold tracking-[0.14em] uppercase px-6 py-3.5 transition-all hover:-translate-y-0.5 hover:shadow-[0_12px_28px_rgba(37,211,102,0.4)]"
             >
               <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
                 <path d="M7 1.6a5.4 5.4 0 0 0-4.65 8.14L1.6 12.4l2.72-.71A5.4 5.4 0 1 0 7 1.6Z" stroke="currentColor" strokeWidth="1.25" strokeLinejoin="round" />
@@ -112,7 +112,7 @@ export default function Contact() {
                 href={s.href}
                 target="_blank"
                 rel="noreferrer"
-                className="group inline-flex items-center gap-2.5 border border-line px-5 py-3.5 font-mono text-[12px] tracking-[0.12em] uppercase text-muted hover:text-[#fdfcf7] hover:bg-teal hover:border-teal transition-all"
+                className="group inline-flex items-center gap-2.5 rounded-lg border border-line px-5 py-3.5 font-mono text-[12px] tracking-[0.12em] uppercase text-muted hover:text-[#fdfcf7] hover:bg-teal hover:border-teal transition-all"
               >
                 {s.icon}
                 {s.label}

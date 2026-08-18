@@ -46,7 +46,7 @@ export default function Credentials() {
                     <p className="font-mono text-[11px] text-faint">{e.place}</p>
                     <div className="mt-4 flex flex-wrap gap-1.5">
                       {e.coursework.map((c) => (
-                        <span key={c} className="font-mono text-[10px] px-2 py-[3px] border border-line text-muted hover:text-paper hover:border-muted transition-colors">
+                        <span key={c} className="rounded-md font-mono text-[10px] px-2 py-[3px] border border-line text-muted hover:text-paper hover:border-muted transition-colors">
                           {c}
                         </span>
                       ))}
@@ -60,7 +60,7 @@ export default function Credentials() {
           {/* certifications */}
           <div className="lg:col-span-4">
             <Reveal y={24}>
-              <div className="border border-line bg-ink-900/60">
+              <div className="rounded-xl border border-line bg-ink-900/60 overflow-hidden">
                 <div className="flex items-center justify-between px-5 h-11 border-b border-line bg-ink-850/70">
                   <span className="font-mono text-[10.5px] tracking-[0.2em] uppercase text-coral">
                     Certifications · 09
@@ -117,10 +117,7 @@ export default function Credentials() {
                     </div>
                   ))}
                 </div>
-                <p className="mt-6 border-t border-line/70 pt-4 font-mono text-[10.5px] leading-relaxed text-faint">
-                  French at A2 — a year in Normandy gave me the accent; the
-                  vocabulary is still a work in progress.
-                </p>
+
               </div>
             </Reveal>
           </div>
