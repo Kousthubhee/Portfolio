@@ -1,5 +1,5 @@
 import type { CSSProperties } from "react";
-import { AI_ALSO, AI_TOOLS, PIPELINE } from "../lib/data";
+import { AI_ALSO, AI_TOOLS } from "../lib/data";
 import { Reveal } from "../lib/hooks";
 import { SectionHeading } from "./Shared";
 
@@ -83,41 +83,13 @@ export default function AILab() {
         <Reveal>
           <p className="max-w-3xl -mt-6 mb-14 text-[15px] leading-relaxed text-muted">
             I'm currently exploring how AI fits into everyday analytics:
-            extraction, drafting, matching, summarizing. The loop below is the
-            pattern I'm testing — the same shape I'd apply to a data pipeline,
-            a report, or any repetitive workflow worth automating.
+            extraction, drafting, matching, summarizing — the repetitive parts
+            of a data pipeline, a report, or any workflow worth automating.
           </p>
         </Reveal>
 
-        {/* pipeline */}
-        <div className="relative">
-          <div className="hidden lg:block absolute top-[7px] inset-x-8 h-px bg-line" aria-hidden="true">
-            <svg className="w-full h-[2px] -mt-[0.5px]" preserveAspectRatio="none" viewBox="0 0 100 2" aria-hidden="true">
-              <line x1="0" y1="1" x2="100" y2="1" stroke="#0d8a78" strokeWidth="1.4" className="anim-dash" />
-            </svg>
-          </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4 lg:gap-3 lg:pt-9">
-            {PIPELINE.map((s, i) => (
-              <Reveal key={s.step} delay={i * 90} y={30}>
-                <div className="group relative h-full rounded-xl border border-line bg-ink-900/70 px-4 pt-5 pb-4 transition-all duration-300 hover:-translate-y-1.5 hover:border-teal/60 hover:bg-ink-850">
-                  <span className="hidden lg:block absolute -top-[35px] left-1/2 -translate-x-1/2 w-[13px] h-[13px] rotate-45 border-2 border-teal bg-ink-950 transition-colors group-hover:bg-teal" />
-                  <div className="flex items-center justify-between">
-                    <span className="font-mono text-[10px] tracking-[0.2em] text-teal">{s.step}</span>
-                    <span className="w-1.5 h-1.5 bg-line group-hover:bg-teal transition-colors" />
-                  </div>
-                  <h3 className="mt-2 font-display font-semibold text-[1.05rem] text-paper">{s.name}</h3>
-                  <p className="mt-1 text-[11.5px] leading-relaxed text-muted">{s.desc}</p>
-                  <p className="mt-2.5 font-mono text-[9.5px] tracking-[0.1em] uppercase text-faint border-t border-line/70 pt-2">
-                    {s.tool}
-                  </p>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-
         {/* tools — marks & names, no sales pitch */}
-        <div className="mt-14 grid grid-cols-2 sm:grid-cols-4 gap-3">
+        <div className="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-3">
           {AI_TOOLS.map((t, i) => (
             <Reveal key={t.name} delay={i * 60} y={22}>
               <div className="group flex h-full flex-col items-center justify-center gap-3 rounded-xl border border-line bg-ink-900/60 px-3 py-6 transition-all duration-300 hover:-translate-y-1 hover:border-teal/60 hover:bg-ink-850">

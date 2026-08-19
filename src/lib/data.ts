@@ -356,45 +356,6 @@ export const AI_ALSO = [
   "…and whatever the ecosystem ships next",
 ];
 
-export const PIPELINE = [
-  {
-    step: "01",
-    name: "Ingest",
-    desc: "Pull raw data in — files, webhooks, databases and feeds.",
-    tool: "n8n triggers",
-  },
-  {
-    step: "02",
-    name: "Clean",
-    desc: "Normalize, dedupe and validate into one tidy shape.",
-    tool: "Python · SQL",
-  },
-  {
-    step: "03",
-    name: "Analyze",
-    desc: "Run the metrics, models and queries that matter.",
-    tool: "BigQuery · Pandas",
-  },
-  {
-    step: "04",
-    name: "Generate",
-    desc: "An LLM drafts the summary, insight or next-step note.",
-    tool: "Claude · other LLM APIs",
-  },
-  {
-    step: "05",
-    name: "Review",
-    desc: "A human checks the draft — AI suggests, people decide.",
-    tool: "human-in-the-loop",
-  },
-  {
-    step: "06",
-    name: "Ship",
-    desc: "Push to a dashboard, report or alert automatically.",
-    tool: "Power BI · webhooks",
-  },
-];
-
 export const SKILL_AREAS = [
   {
     name: "Data Analytics",
